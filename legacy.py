@@ -2,8 +2,8 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from Imodules import *
-from utils import pad_size
+from .Imodules import *
+from .utils import pad_size
 
 class ConvT(nn.Module):
     """
