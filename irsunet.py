@@ -45,7 +45,7 @@ class IRSUNet(nn.Module):
         # Output feature embedding without batchnorm.
         self.embed_out = EmbeddingMod(nfeatures[0], nfeatures[0], embed_ks, activation=activation)
         self.output    = nn.Conv3d(nfeatures[0], out_ch, (1,1,1), bias=True)
-        #self.set_invert(invert)
+        self.set_invert(invert)
 
     def forward(self, x):
         """
