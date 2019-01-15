@@ -27,7 +27,7 @@ class RevBlock(nn.Module):
             y1.data.set_()
             y2.data.set_()
             
-            if self.training:
+            if self.training and y.requires_grad:
                 handle_ref = []
                 handle_ref.append(y.register_hook(self.get_variable_backward_hook((x, x1, x2, y1, y2), y, handle_ref)))
 
