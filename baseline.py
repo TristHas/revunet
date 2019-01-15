@@ -228,7 +228,7 @@ class RSUNet(nn.Module):
     """
     def __init__(self, aff, depth,
                  residual=True, upsample='bilinear', use_bn=True,
-                 momentum=0.001, track=False):
+                 momentum=0.001, track=False, activation=F.elu):
         super(RSUNet, self).__init__()
         self.residual = residual
         self.upsample = upsample
@@ -241,47 +241,47 @@ class RSUNet(nn.Module):
         self.depth = depth
 
         # Input feature embedding without batchnorm.
-        self.embed_in = EmbeddingMod(in_channels, embed_nin, embed_ks)
+        self.embed_in = EmbeddingMod(in_channels, embed_nin, embed_ks, activation=activation)
         in_channels = embed_nin
 
         # Contracting/downsampling pathway.
         for d in range(depth):
             fs, ks = nfeatures[d], sizes[d]
-            self.add_conv_mod(d, in_channels, fs, ks, track=track)
+            self.add_conv_mod(d, in_channels, fs, ks, track=track, activation=activation)
             self.add_max_pool(d+1, fs)
             in_channels = fs
 
         # Bridge.
         fs, ks = nfeatures[depth], sizes[depth]
-        self.add_conv_mod(depth, in_channels, fs, ks, track=track)
+        self.add_conv_mod(depth, in_channels, fs, ks, track=track, activation=activation)
         in_channels = fs
 
         # Expanding/upsampling pathway.
         for d in reversed(range(depth)):
             fs, ks = nfeatures[d], sizes[d]
-            self.add_upsample_mod(d, in_channels, fs, track=track)
+            self.add_upsample_mod(d, in_channels, fs, track=track, activation=activation)
             in_channels = fs
-            self.add_dconv_mod(d, in_channels, fs, ks, track=track)
+            self.add_dconv_mod(d, in_channels, fs, ks, track=track, activation=activation)
 
         # Output feature embedding without batchnorm.
-        self.embed_out = EmbeddingMod(in_channels, embed_nout, embed_ks)
+        self.embed_out = EmbeddingMod(in_channels, embed_nout, embed_ks, activation=activation)
         in_channels = embed_nout
 
         # Output by spec.
         self.output = OutputMod(in_channels, aff)
 
-    def add_conv_mod(self, depth, in_channels, out_channels, kernel_size, track=False):
+    def add_conv_mod(self, depth, in_channels, out_channels, kernel_size, track=False, activation=F.elu):
         name = 'convmod{}'.format(depth)
         module = ConvMod(in_channels, out_channels, kernel_size,
                          residual=self.residual, use_bn=self.use_bn,
-                         momentum=self.momentum, track=track)
+                         momentum=self.momentum, track=track, activation=activation)
         self.add_module(name, module)
 
-    def add_dconv_mod(self, depth, in_channels, out_channels, kernel_size, track=False):
+    def add_dconv_mod(self, depth, in_channels, out_channels, kernel_size, track=False, activation=F.elu):
         name = 'dconvmod{}'.format(depth)
         module = ConvMod(in_channels, out_channels, kernel_size,
                          residual=self.residual, use_bn=self.use_bn,
-                         momentum=self.momentum, track=track)
+                         momentum=self.momentum, track=track, activation=activation)
         self.add_module(name, module)
 
     def add_max_pool(self, depth, in_channels, down=(1,2,2)):
@@ -289,11 +289,11 @@ class RSUNet(nn.Module):
         module = nn.MaxPool3d(down)
         self.add_module(name, module)
 
-    def add_upsample_mod(self, depth, in_channels, out_channels, up=(1,2,2), track=False):
+    def add_upsample_mod(self, depth, in_channels, out_channels, up=(1,2,2), track=False, activation=F.elu):
         name = 'upsample{}'.format(depth)
         module = UpsampleMod(in_channels, out_channels, up=up,
                              mode=self.upsample, use_bn=self.use_bn,
-                             momentum=self.momentum, track=track)
+                             momentum=self.momentum, track=track, activation=activation)
         self.add_module(name, module)
 
     def forward(self, x):
