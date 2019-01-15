@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from rev_block import RevBlock
-from utils import pad_size
+from .rev_block import RevBlock
+from .utils import pad_size
 
 class IBatchNorm3d(nn.BatchNorm3d):
     """
@@ -28,7 +28,6 @@ class IBatchNorm3d(nn.BatchNorm3d):
             mean, std = x_.mean(2).squeeze(), x_.std(2).squeeze()
             
         out = super().forward(x)
-        
         if self.training:
             handle_ref = [0]
             handle_ref_ = out.register_hook(self.get_variable_backward_hook(x, out, std, mean, handle_ref))
@@ -58,13 +57,15 @@ class ISequential(nn.Sequential):
             if hasattr(m, "set_invert"):
                 m.set_invert(invert)
 
+
 class IModuleList(nn.ModuleList):
     def set_invert(self, invert):
         self.invert = invert
         for m in self.children():
             if hasattr(m, "set_invert"):
                 m.set_invert(invert)
-                
+
+
 class IUpsample(nn.Upsample):
     def __init__(self, *args, invert=True, **kwargs):
         super().__init__(*args, **kwargs)
