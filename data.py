@@ -120,7 +120,7 @@ class DataSet(object):
         maxs = coord + self.delta
         return tuple(map(lambda x: slice(*x), zip(mins, maxs)))
     
-def load_data():
+def load_data(root="/home/tristan/workspace/data/snemi3d"):
     dst = list()
     dst.append((0,0,1))
     dst.append((0,1,0))
@@ -155,8 +155,6 @@ def load_data():
 
     max_or = np.array(dst_or).max(0)
     max_sub = np.array(dst_sub).max(0)
-
-    root     = "/home/tristan/workspace/data/snemi3d"
     boundary = f"{root}/train-membranes-idsia.tif"
     labels   = f"{root}/train-labels.tif"
     img      = f"{root}/train-input.tif"

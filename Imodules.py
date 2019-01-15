@@ -29,7 +29,7 @@ class IBatchNorm3d(nn.BatchNorm3d):
             mean, std = x_.mean(2).squeeze(), x_.std(2).squeeze()
             
         out = super().forward(x)
-        if self.training:
+        if self.training and out.requires_grad:
             handle_ref = [0]
             handle_ref_ = out.register_hook(self.get_variable_backward_hook(x, out, std, mean, handle_ref))
             handle_ref[0] = handle_ref_
@@ -85,7 +85,7 @@ class IUpsample(nn.Upsample):
     def i_forward(self, x):
         y=super().forward(x)
         if self.mode == 'nearest':
-            if self.training:
+            if self.training and y.requires_grad:
                 handle_ref = []
                 handle_ref.append(
                     y.register_hook(self.get_variable_backward_hook(x, y, handle_ref))
@@ -124,7 +124,7 @@ class ILeakyReLU(nn.LeakyReLU):
 
     def i_forward(self, x):
         y=super().forward(x)
-        if self.training:
+        if self.training and y.requires_grad:
             handle_ref = [0]
             handle_ref_ = y.register_hook(self.get_variable_backward_hook(x, y, handle_ref))
             handle_ref[0] = handle_ref_
@@ -184,16 +184,54 @@ class IConvMod(nn.Module):
         pad  = pad_size(ks, 'same')
         conv = [nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)]
         bn   = [IBatchNorm3d(out_channels, track_running_stats=bn_stats)]
-        for i in range(nlayer-1):
-            conv.append(IConv3d(out_channels, out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias))
-            bn.append(IBatchNorm3d(out_channels, track_running_stats=bn_stats))
-        # Activation function.
+        activation = activation or ILeakyReLU()
         self.activation = activation
-        self.conv = IModuleList(conv)
-        self.bn = IModuleList(bn)
-        #self.set_invert(invert)
+        self.skip_invert = skip_invert
+
+        if not skip_invert:
+            conv = [nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)]
+            bn   = [IBatchNorm3d(out_channels, track_running_stats=bn_stats)]
+
+                    
+            for i in range(nlayer-1):
+                conv.append(IConv3d(out_channels, out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias))
+                bn.append(IBatchNorm3d(out_channels, track_running_stats=bn_stats))
+            # Activation function.
+            self.conv = IModuleList(conv)
+            self.bn = IModuleList(bn)
+            #self.set_invert(invert)
         
+        if skip_invert:
+            self.conv = IModuleList([nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
+            self.bn   = IModuleList([
+                IBatchNorm3d(out_channels, track_running_stats=bn_stats),
+                IBatchNorm3d(out_channels, track_running_stats=bn_stats),
+            ])
+
+            class SkipModule(nn.Module):
+                def __init__(self, channels):
+                    super().__init__()
+                    self.conv = IModuleList([nn.Conv3d(channels,  channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
+                    self.bn = IModuleList()
+                    self.activation = activation
+                    for i in range(nlayer-2):
+                        self.conv.append(IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias))
+                        self.bn.append(IBatchNorm3d(channels, track_running_stats=bn_stats))
+
+                def forward(self, x):
+                    for conv, bn in zip(self.conv[:-1], self.bn):
+                        x = self.activation(bn(conv(x)))
+
+                    return self.conv[-1](x)
+                
+            self.skip = ISkip(out_channels, SkipModule, invert=True)
+            self.skip.set_invert(invert)
+
+
     def forward(self, x):
+        if self.skip_invert:
+            return self._forward_iskip(x)
+        
         return self._forward_(x)
         
     def _forward(self, x):
@@ -247,10 +285,11 @@ class IBroadcast(nn.Module):
     def forward(self, x):
         out = x.repeat(1, self.repeat_count, 1, 1, 1)
         if self.invert:
-            handle_ref = []
-            handle_ref.append(
-                out.register_hook(self.get_variable_backward_hook(x, out, handle_ref))
-            )
+            if self.training and out.requires_grad:
+                handle_ref = []
+                handle_ref.append(
+                    out.register_hook(self.get_variable_backward_hook(x, out, handle_ref))
+                )
             x.data.set_()
         return out
         
