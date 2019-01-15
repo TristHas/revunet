@@ -82,11 +82,11 @@ class IUpsample(nn.Upsample):
     def i_forward(self, x):
         y=super().forward(x)
         if self.mode == 'nearest':
-
-            handle_ref = []
-            handle_ref.append(
-                y.register_hook(self.get_variable_backward_hook(x, y, handle_ref))
-            )
+            if self.training:
+                handle_ref = []
+                handle_ref.append(
+                    y.register_hook(self.get_variable_backward_hook(x, y, handle_ref))
+                )
             x.data.set_()
 
         return y
@@ -148,33 +148,26 @@ class IConv3d(nn.Module):
         self.out_channels = out_channels
         self.args = args
         self.kwargs = kwargs
-        
-        f_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
-        g_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
-        self.inv_module = RevBlock(f_conv, g_conv)
-        
-        self.noinv_module = nn.Conv3d(self.in_channels, self.out_channels, *self.args, **self.kwargs)
-        self.set_module()
 
-    def set_module(self):
         if self.invert:
             if self.in_channels == self.out_channels:
                 assert (self.in_channels % 2) == 0
-                self.module =self.inv_module
-
+                f_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
+                g_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
+                self.module = RevBlock(f_conv, g_conv)
             else:
                 raise Exception(f'Cannot inverse convolution with in_channels {self.in_channels} and out_channels {self.out_channels}')
         else:
-            self.module = self.noinv_module
+            self.module = nn.Conv3d(self.in_channels, self.out_channels, *self.args, **self.kwargs)
 
     def set_invert(self, invert):
-        if invert != self.invert:
-            print(f"WARNING: Reinitialization of IConv3d from {self.invert} to {invert}")
-            self.invert = invert
-            self.set_module()    
+        print(f"WARNING: Cannot invert IConv3d after initialisation")
+        if self.invert:
+            self.module.set_invert(invert)
 
     def forward(self, x):
         return self.module(x)
+
     
 class IConvMod(nn.Module):
     """
@@ -232,3 +225,63 @@ class IConvMod(nn.Module):
         for m in self.modules():
             if type(m) in layers and hasattr(m, "set_invert"):
                 m.set_invert(invert)
+            
+            
+class IBroadcast(nn.Module):
+    def __init__(self, in_channels, out_channels, invert=True):
+        if (out_channels  % in_channels) != 0:
+            raise Exception(f'Cannot broadcast {in_channels} in_channels to {out_channels} out_channels')
+        super().__init__()
+        self.invert = invert
+        
+        self.in_channels = in_channels
+        self.repeat_count = out_channels // in_channels
+    
+    def set_invert(self, invert):
+        self.invert = invert
+
+    def forward(self, x):
+        out = x.repeat(1, self.repeat_count, 1, 1, 1)
+        if self.invert:
+            handle_ref = []
+            handle_ref.append(
+                out.register_hook(self.get_variable_backward_hook(x, out, handle_ref))
+            )
+            x.data.set_()
+        return out
+        
+    def inverse(self, y, x):
+        x_ = y.narrow(1, 0, self.in_channels)
+        x.data.set_(x_)
+        y.data.set_()
+
+    def get_variable_backward_hook(self, x, output, handle_ref):
+        def backward_hook(grad):
+            self.inverse(output, x)
+            handle_ref[0].remove()
+        return backward_hook
+    
+
+class ISkip(nn.Module):
+    def __init__(self, in_channels, skip_module_fn, invert=True):
+        super().__init__()
+        self.invert = invert
+        if self.invert:
+            self.module = RevBlock(
+                skip_module_fn(in_channels//2),
+                skip_module_fn(in_channels//2),
+            )
+            self.module.set_invert(True)
+        else:
+            self.module = skip_module_fn(in_channels)
+    
+    def forward(self, x):
+        if self.invert:
+            return self.module(x) 
+        else:
+            return x + self.module(x)
+    
+    def set_invert(self, invert):
+        print(f"WARNING: Cannot invert ISkip after initialisation")
+        if self.invert:
+            self.module.set_invert(invert)
