@@ -3,9 +3,9 @@ from torch import nn
 from torch.nn import functional as F
 
 #from . import *
-from legacy import *
-from utils import *
-from Imodules import *
+from .legacy import *
+from .utils import *
+from .Imodules import *
 
 class IRSUNet(nn.Module):
     """
@@ -13,22 +13,25 @@ class IRSUNet(nn.Module):
     """
     def __init__(self, out_ch, depth=4, 
                  ks=(3,3,3), embed_ks=(1,5,5), 
-                 activation=None, invert=True,
+                 activation=None, invert=True, skip_invert=True,
                  nfeatures = [24,32,48,72,104,144],
                  upsample='bilinear', pool=(1,2,2)):
         super(IRSUNet, self).__init__()
+        activation = ILeakyReLU() if activation is None else activation
         self.upsample   = upsample
         self.depth      = depth
-        self.activation = ILeakyReLU() if activation is None else activation
+        self.activation = activation
         self.pooling    = nn.MaxPool3d(pool)
 
         # Contracting Path
-        self.embed_in = EmbeddingMod(1, nfeatures[0], embed_ks)
+        self.embed_in = EmbeddingMod(1, nfeatures[0], embed_ks, activation=activation)
         self.contract = IModuleList([IConvMod(nfeatures[0], nfeatures[0], 
-                                             self.activation, ks=ks)])
+                                              invert=invert, skip_invert=skip_invert,
+                                              activation=activation, ks=ks)])
         for d in range(depth):
             self.contract.append(IConvMod(nfeatures[d], nfeatures[d+1], 
-                                          self.activation, ks=ks))
+                                          invert=invert, skip_invert=skip_invert,
+                                          activation=activation, ks=ks))
         
         # Expanding Path
         self.expand, self.upsamp =IModuleList(), IModuleList() 
@@ -36,12 +39,13 @@ class IRSUNet(nn.Module):
             self.upsamp.append(UpsampleMod(nfeatures[d+1], nfeatures[d], 
                                            up=pool, mode=self.upsample))
             self.expand.append(IConvMod(nfeatures[d], nfeatures[d], 
-                                        self.activation, ks=ks))
+                                        invert=invert, skip_invert=skip_invert,
+                                        activation=activation, ks=ks))
 
         # Output feature embedding without batchnorm.
-        self.embed_out = EmbeddingMod(nfeatures[0], nfeatures[0], embed_ks)
+        self.embed_out = EmbeddingMod(nfeatures[0], nfeatures[0], embed_ks, activation=activation)
         self.output    = nn.Conv3d(nfeatures[0], out_ch, (1,1,1), bias=True)
-        self.set_invert(invert)
+        #self.set_invert(invert)
 
     def forward(self, x):
         """
