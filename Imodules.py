@@ -2,8 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .rev_block import RevBlock
-from .utils import pad_size
+from rev_block import RevBlock
+from utils import pad_size
+
 
 class IBatchNorm3d(nn.BatchNorm3d):
     """
@@ -49,6 +50,7 @@ class IBatchNorm3d(nn.BatchNorm3d):
             self.inverse(output, x, std, mean)
             handle_ref[0].remove()
         return backward_hook
+
 
 class ISequential(nn.Sequential):
     def set_invert(self, invert):
@@ -105,6 +107,7 @@ class IUpsample(nn.Upsample):
             handle_ref[0].remove()
         return backward_hook
     
+
 class ILeakyReLU(nn.LeakyReLU):
     def __init__(self, *args, invert=True, **kwargs):
         super().__init__(*args, **kwargs)
@@ -139,7 +142,7 @@ class ILeakyReLU(nn.LeakyReLU):
             self.inverse(x, y)
             handle_ref[0].remove()
         return backward_hook
-    
+
 
 class IConv3d(nn.Module):
     def __init__(self, in_channels, out_channels, *args, invert=True, **kwargs):
@@ -169,7 +172,7 @@ class IConv3d(nn.Module):
     def forward(self, x):
         return self.module(x)
 
-    
+
 class IConvMod(nn.Module):
     """
         Convolution module.
@@ -227,7 +230,7 @@ class IConvMod(nn.Module):
             if type(m) in layers and hasattr(m, "set_invert"):
                 m.set_invert(invert)
             
-            
+
 class IBroadcast(nn.Module):
     def __init__(self, in_channels, out_channels, invert=True):
         if (out_channels  % in_channels) != 0:
