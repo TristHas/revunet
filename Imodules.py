@@ -102,7 +102,7 @@ class IBatchNorm3d(nn.BatchNorm3d):
 class ILeakyReLU(nn.LeakyReLU):
     def __init__(self, *args, invert=True, **kwargs):
         super().__init__(*args, **kwargs)
-        self.self_invert(invert)
+        self.set_invert(invert)
         
     def set_invert(self, invert):
         self.invert = invert
@@ -303,6 +303,7 @@ class RevAdd(nn.Module):
     def inverse(self, x, out):
         with torch.no_grad():
             x_ = out - self.skip
+        x.data.set_(x_)
         out.data.set_()
 
     def get_variable_backward_hook(self, x, out, handle_ref):

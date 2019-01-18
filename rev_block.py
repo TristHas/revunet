@@ -7,7 +7,7 @@ class RevBlock(nn.Module):
         super().__init__()
         self.F_module = F_module        
         self.G_module = G_module
-        self.invert = self.set_invert(invert)
+        self.set_invert(invert)
 
     def forward(self, x):
         x1, x2 = torch.chunk(x, 2, dim=1)
