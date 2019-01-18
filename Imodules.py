@@ -173,7 +173,6 @@ class IConv3d(nn.Module):
     def forward(self, x):
         return self.module(x)
 
-
 class IConvMod(nn.Module):
     """
         Convolution module.
@@ -187,6 +186,8 @@ class IConvMod(nn.Module):
         activation = activation or ILeakyReLU()
         self.activation = activation
         self.skip_invert = skip_invert
+        self.skip = RevAdd(invert)
+        self.set_invert(invert)
 
         if not skip_invert:
             conv = [nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)]
@@ -200,7 +201,6 @@ class IConvMod(nn.Module):
             # Activation function.
             self.conv = IModuleList(conv)
             self.bn = IModuleList(bn)
-            #self.set_invert(invert)
         
         if skip_invert:
             self.conv = IModuleList([nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
@@ -233,29 +233,16 @@ class IConvMod(nn.Module):
     def forward(self, x):
         if self.skip_invert:
             return self._forward_iskip(x)
-        return self._forward_(x)
+        return self._forward(x)
         
     def _forward(self, x):
         for i,(conv,bn) in enumerate(zip(self.conv, self.bn)):
             x = conv(x)
-            if i == 0:
-                skip = x + 0
+            if i==0:
+                
+                x = self.skip.register_skip(x)
             if i == len(self.conv)-1:
-                x = x+skip
-            x = self.activation(bn(x))
-        return x
-
-    def _forward_(self, x):
-        conv, bn = self.conv[0], self.bn[0]
-        x = conv(x)
-        x = bn(x)
-        x = self.activation(x)
-        #x = self.activation(bn(conv(x)))
-        skip = x + 0
-        for i,(conv,bn) in enumerate(zip(self.conv[1:], self.bn[1:])):
-            x = conv(x)
-            if i == len(self.conv[1:])-1:
-                x = x+skip
+                x = self.skip(x)
             x = self.activation(bn(x))
         return x
 
@@ -269,14 +256,44 @@ class IConvMod(nn.Module):
 
     def set_invert(self, invert, layers=None):
         self.invert=invert
-        #if layers is None: 
-        #    layers = set(map(lambda x:type(x), self.modules()))-{type(self)}
+
+
+class RevAdd(nn.Module):
+    def __init__(self, invert=True):
+        super().__init__()
+        self.set_invert(invert)
+        
+    def set_invert(self, invert):
+        self.invert=invert
+        
+    def register_skip(self, skip):
+        self.skip = skip
+        if True:#self.invert:
+            return skip+0
         #else:
-        #    layers = set(layers)
-        #for m in self.modules():
-        #    if type(m) in layers and hasattr(m, "set_invert"):
-        #        m.set_invert(invert)
+        #    return skip
+        
+    def forward(self, x):
+        out = x + self.skip
+        if self.invert:
+            if self.training and out.requires_grad:
+                handle_ref = [0]
+                handle_ref_ = out.register_hook(self.get_variable_backward_hook(x, out, handle_ref))
+                handle_ref[0] = handle_ref_
+            x.data.set_()
+        return out
             
+    def inverse(self, x, out):
+        with torch.no_grad():
+            x_ = out - self.skip
+        out.data.set_()
+
+    def get_variable_backward_hook(self, x, out, handle_ref):
+        def backward_hook(grad):
+            self.inverse(x, out)
+            handle_ref[0].remove()
+        return backward_hook
+    
 
 class IBroadcast(nn.Module):
     def __init__(self, in_channels, out_channels, invert=True):
@@ -334,7 +351,4 @@ class ISkip(nn.Module):
             return x + self.module(x)
     
     def set_invert(self, invert):
-        return None
-        if self.invert:
-            print(f"WARNING: Cannot invert ISkip after initialisation")
-            self.module.set_invert(invert)
+        pass
