@@ -20,7 +20,7 @@ class RevBlock(nn.Module):
 
         y2 = self.G_module(y1) + x2
         if self.invert:
-            x2.data.set_()        
+            x2.data.set_() 
 
         y = torch.cat([y1, y2], dim=1)
         if self.invert:
@@ -56,9 +56,4 @@ class RevBlock(nn.Module):
         return backward_hook
 
     def set_invert(self, invert):
-        self.invert=invert
-        
-        if hasattr(self.F_module, "set_invert"):
-            self.F_module.set_invert(invert)
-        if hasattr(self.G_module, "set_invert"):
-            self.G_module.set_invert(invert)
+        self.invert = invert
