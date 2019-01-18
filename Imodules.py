@@ -5,14 +5,61 @@ import torch.nn.functional as F
 from .rev_block import RevBlock
 from .utils import pad_size
 
+class IConv3d(nn.Module):
+    def __init__(self, in_channels, out_channels, *args, invert=True, **kwargs):
+        super().__init__()
+        self.set_invert(invert)
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.args = args
+        self.kwargs = kwargs
 
+        if self.invert:
+            if self.in_channels == self.out_channels:
+                assert (self.in_channels % 2) == 0
+                f_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
+                g_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
+                self.module = RevBlock(f_conv, g_conv)
+            else:
+                raise Exception(f'Cannot inverse convolution with in_channels {self.in_channels} and out_channels {self.out_channels}')
+        else:
+            self.module = nn.Conv3d(self.in_channels, self.out_channels, *self.args, **self.kwargs)
+
+    def set_invert(self, invert):
+    	self.invert = invert
+
+    def forward(self, x):
+        return self.module(x)
+
+class ISkip(nn.Module):
+    def __init__(self, channels, skip_module_fn, invert=True):
+        super().__init__()
+        self.set_invert(invert)
+        if self.invert:
+            self.module = RevBlock(
+                skip_module_fn(channels//2),
+                skip_module_fn(channels//2),
+            )
+        else:
+            self.module = skip_module_fn(channels)
+    
+    def forward(self, x):
+        if self.invert:
+            return self.module(x) 
+        else:
+            return x + self.module(x)
+    
+    def set_invert(self, invert):
+        self.invert = invert
+
+            
 class IBatchNorm3d(nn.BatchNorm3d):
     """
     """
     def __init__(self, *args, ieps=0, invert=True, **kwargs):
         super().__init__(*args, **kwargs)
         self.ieps = ieps
-        self.invert = invert
+        self.set_invert(invert)
         
     def set_invert(self, invert):
         self.invert = invert
@@ -50,7 +97,42 @@ class IBatchNorm3d(nn.BatchNorm3d):
             self.inverse(output, x, std, mean)
             handle_ref[0].remove()
         return backward_hook
+    
 
+class ILeakyReLU(nn.LeakyReLU):
+    def __init__(self, *args, invert=True, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.self_invert(invert)
+        
+    def set_invert(self, invert):
+        self.invert = invert
+                
+    def forward(self, x):
+        if self.invert:
+            return self.i_forward(x)
+        else:
+            return super().forward(x)
+
+    def i_forward(self, x):
+        y=super().forward(x)
+        if self.training and y.requires_grad:
+            handle_ref = [0]
+            handle_ref_ = y.register_hook(self.get_variable_backward_hook(x, y, handle_ref))
+            handle_ref[0] = handle_ref_
+        x.data.set_()
+        return y
+        
+    def inverse(self, x, y):
+        with torch.no_grad():
+            x_ = F.leaky_relu(y, 1/self.negative_slope, self.inplace)
+        x.data.set_(x_)
+        y.data.set_()
+
+    def get_variable_backward_hook(self, x, y, handle_ref):
+        def backward_hook(grad):
+            self.inverse(x, y)
+            handle_ref[0].remove()
+        return backward_hook
 
 class ISequential(nn.Sequential):
     def set_invert(self, invert):
@@ -72,7 +154,7 @@ class IModuleList(nn.ModuleList):
 class IUpsample(nn.Upsample):
     def __init__(self, *args, invert=True, **kwargs):
         super().__init__(*args, **kwargs)
-        self.invert = invert
+        self.set_invert( invert)
         
     def set_invert(self, invert):
         self.invert = invert
@@ -108,70 +190,6 @@ class IUpsample(nn.Upsample):
             handle_ref[0].remove()
         return backward_hook
     
-
-class ILeakyReLU(nn.LeakyReLU):
-    def __init__(self, *args, invert=True, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.invert = invert
-        
-    def set_invert(self, invert):
-        self.invert = invert
-                
-    def forward(self, x):
-        if self.invert:
-            return self.i_forward(x)
-        else:
-            return super().forward(x)
-
-    def i_forward(self, x):
-        y=super().forward(x)
-        if self.training and y.requires_grad:
-            handle_ref = [0]
-            handle_ref_ = y.register_hook(self.get_variable_backward_hook(x, y, handle_ref))
-            handle_ref[0] = handle_ref_
-        x.data.set_()
-        return y
-        
-    def inverse(self, x, y):
-        with torch.no_grad():
-            x_ = F.leaky_relu(y, 1/self.negative_slope, self.inplace)
-        x.data.set_(x_)
-        y.data.set_()
-
-    def get_variable_backward_hook(self, x, y, handle_ref):
-        def backward_hook(grad):
-            self.inverse(x, y)
-            handle_ref[0].remove()
-        return backward_hook
-
-
-class IConv3d(nn.Module):
-    def __init__(self, in_channels, out_channels, *args, invert=True, **kwargs):
-        super().__init__()
-        self.invert = invert
-        self.in_channels = in_channels
-        self.out_channels = out_channels
-        self.args = args
-        self.kwargs = kwargs
-
-        if self.invert:
-            if self.in_channels == self.out_channels:
-                assert (self.in_channels % 2) == 0
-                f_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
-                g_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
-                self.module = RevBlock(f_conv, g_conv)
-            else:
-                raise Exception(f'Cannot inverse convolution with in_channels {self.in_channels} and out_channels {self.out_channels}')
-        else:
-            self.module = nn.Conv3d(self.in_channels, self.out_channels, *self.args, **self.kwargs)
-
-    def set_invert(self, invert):
-        print(f"WARNING: Cannot invert IConv3d after initialisation")
-        if self.invert:
-            self.module.set_invert(invert)
-
-    def forward(self, x):
-        return self.module(x)
 
 class IConvMod(nn.Module):
     """
@@ -227,7 +245,6 @@ class IConvMod(nn.Module):
                     return self.conv[-1](x)
                 
             self.skip = ISkip(out_channels, SkipModule, invert=True)
-            self.skip.set_invert(invert)
 
 
     def forward(self, x):
@@ -300,7 +317,7 @@ class IBroadcast(nn.Module):
         if (out_channels  % in_channels) != 0:
             raise Exception(f'Cannot broadcast {in_channels} in_channels to {out_channels} out_channels')
         super().__init__()
-        self.invert = invert
+        self.set_invert( invert)
         
         self.in_channels = in_channels
         self.repeat_count = out_channels // in_channels
@@ -334,7 +351,7 @@ class IBroadcast(nn.Module):
 class ISkip(nn.Module):
     def __init__(self, channels, skip_module_fn, invert=True):
         super().__init__()
-        self.invert = invert
+        self.set_invert( invert)
         if self.invert:
             self.module = RevBlock(
                 skip_module_fn(channels//2),
@@ -351,4 +368,4 @@ class ISkip(nn.Module):
             return x + self.module(x)
     
     def set_invert(self, invert):
-        pass
+        self.invert=invert
