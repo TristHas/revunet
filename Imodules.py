@@ -19,7 +19,7 @@ class IConv3d(nn.Module):
                 assert (self.in_channels % 2) == 0
                 f_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
                 g_conv =  nn.Conv3d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
-                self.module = RevBlock(f_conv, g_conv)
+                self.module = RevBlock(f_conv, g_conv, invert=True)
             else:
                 raise Exception(f'Cannot inverse convolution with in_channels {self.in_channels} and out_channels {self.out_channels}')
         else:

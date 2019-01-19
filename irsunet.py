@@ -72,10 +72,4 @@ class IRSUNet(nn.Module):
     def set_invert(self, invert, layers=None):
         """
         """
-        if layers is None: 
-            layers = set(map(lambda x:type(x), self.modules()))-{type(self)}
-        else:
-            layers = set(layers)
-        for m in self.modules():
-            if type(m) in layers and hasattr(m, "set_invert"):
-                m.set_invert(invert)
+        self.invert = invert
