@@ -17,7 +17,7 @@ class IRSUNet(nn.Module):
                  nfeatures = [24,32,48,72,104,144],
                  upsample='bilinear', pool=(1,2,2)):
         super(IRSUNet, self).__init__()
-        activation = ILeakyReLU() if activation is None else activation
+        activation      = ILeakyReLU(invert=invert) if activation is None else activation
         self.upsample   = upsample
         self.depth      = depth
         self.activation = activation
@@ -37,7 +37,7 @@ class IRSUNet(nn.Module):
         self.expand, self.upsamp =IModuleList(), IModuleList() 
         for d in reversed(range(depth)):
             self.upsamp.append(UpsampleMod(nfeatures[d+1], nfeatures[d], 
-                                           up=pool, mode=self.upsample))
+                                           up=pool, mode=self.upsample, activation=activation))
             self.expand.append(IConvMod(nfeatures[d], nfeatures[d], 
                                         invert=invert, skip_invert=skip_invert,
                                         activation=activation, ks=ks))

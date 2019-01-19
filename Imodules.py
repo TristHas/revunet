@@ -32,22 +32,27 @@ class IConv3d(nn.Module):
         return self.module(x)
 
 class ISkip(nn.Module):
-    def __init__(self, channels, skip_module_fn, invert=True):
+    def __init__(self, channels, skip_module_fn, skip_invert=True, invert=True):
         super().__init__()
-        self.set_invert(invert)
-        if self.invert:
+        self.set_invert(skip_invert)
+        self.skip_invert = skip_invert
+
+        if skip_invert:
             self.module = RevBlock(
                 skip_module_fn(channels//2),
                 skip_module_fn(channels//2),
+                invert = True
             )
         else:
+            self.skip = RevAdd(invert)
             self.module = skip_module_fn(channels)
     
     def forward(self, x):
-        if self.invert:
+        if self.skip_invert:
             return self.module(x) 
         else:
-            return x + self.module(x)
+            x = self.skip.register_skip(x)
+            return self.skip(self.module(x))
     
     def set_invert(self, invert):
         self.invert = invert
@@ -191,6 +196,33 @@ class IUpsample(nn.Upsample):
         return backward_hook
     
 
+
+class ResidualConvMod(nn.Module):
+    def __init__(self, channels, activation=None, 
+                 invert=True, nlayer=3, pad=(1,1,1),
+                 ks=(3,3,3), bias=False, bn_stats=False, st=(1,1,1)):
+        super().__init__()
+        self.layers = nn.ModuleList([
+            IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias, invert=invert),
+            *[
+                module for module in 
+                (
+                    IBatchNorm3d(channels, track_running_stats=bn_stats, invert=invert),
+                    activation,
+                    IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias, invert=invert)
+                )
+                for layer in range(nlayer-2)
+            ],
+        ])
+        
+        self.invert = invert
+        
+    def forward(self, x):
+        for layer in self.layers:
+            x = layer(x)
+        return x
+
+
 class IConvMod(nn.Module):
     """
         Convolution module.
@@ -201,69 +233,24 @@ class IConvMod(nn.Module):
         super().__init__()
         st   = (1,1,1)
         pad  = pad_size(ks, 'same')
-        activation = activation or ILeakyReLU()
-        self.activation = activation
+        self.activation = activation or ILeakyReLU(invert=invert)
         self.skip_invert = skip_invert
-        self.skip = RevAdd(invert)
         self.set_invert(invert)
 
-        if not skip_invert:
-            conv = [nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)]
-            bn   = [IBatchNorm3d(out_channels, track_running_stats=bn_stats)]
+        self.conv = IModuleList([nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
+        self.bn   = IModuleList([
+            IBatchNorm3d(out_channels, track_running_stats=bn_stats, invert=invert),
+            IBatchNorm3d(out_channels, track_running_stats=bn_stats, invert=invert),
+        ])
 
-                    
-            for i in range(nlayer-1):
-                conv.append(IConv3d(out_channels, out_channels, kernel_size=ks, 
-                                    stride=st, padding=pad, bias=bias, invert=invert))
-                bn.append(IBatchNorm3d(out_channels, track_running_stats=bn_stats))
-            # Activation function.
-            self.conv = IModuleList(conv)
-            self.bn = IModuleList(bn)
-        
-        if skip_invert:
-            self.conv = IModuleList([nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
-            self.bn   = IModuleList([
-                IBatchNorm3d(out_channels, track_running_stats=bn_stats),
-                IBatchNorm3d(out_channels, track_running_stats=bn_stats),
-            ])
+        residual_module_fn = lambda channels: ResidualConvMod(
+                 channels=channels, activation=self.activation, 
+                 invert=invert, nlayer=nlayer, pad=pad,
+                 ks=ks, bias=bias, bn_stats=bn_stats, st=st)
 
-            class SkipModule(nn.Module):
-                def __init__(self, channels):
-                    super().__init__()
-                    self.conv = IModuleList([nn.Conv3d(channels,  channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
-                    self.bn = IModuleList()
-                    self.activation = activation
-                    for i in range(nlayer-2):
-                        self.conv.append(IConv3d(channels, channels, kernel_size=ks, 
-                                                 stride=st, padding=pad, bias=bias, invert=invert))
-                        self.bn.append(IBatchNorm3d(channels, track_running_stats=bn_stats))
+        self.skip = ISkip(out_channels, residual_module_fn, skip_invert=skip_invert, invert=invert)
 
-                def forward(self, x):
-                    for conv, bn in zip(self.conv[:-1], self.bn):
-                        x = self.activation(bn(conv(x)))
-
-                    return self.conv[-1](x)
-                
-            self.skip = ISkip(out_channels, SkipModule, invert=True)
-
-
-    def forward(self, x):
-        if self.skip_invert:
-            return self._forward_iskip(x)
-        return self._forward(x)
-        
-    def _forward(self, x):
-        for i,(conv,bn) in enumerate(zip(self.conv, self.bn)):
-            x = conv(x)
-            if i==0:
-                
-                x = self.skip.register_skip(x)
-            if i == len(self.conv)-1:
-                x = self.skip(x)
-            x = self.activation(bn(x))
-        return x
-
-    def _forward_iskip(self,x):
+    def forward(self,x):
         conv, bn = self.conv[0], self.bn[0]
         x = conv(x)
         x = bn(x)
@@ -273,7 +260,6 @@ class IConvMod(nn.Module):
 
     def set_invert(self, invert, layers=None):
         self.invert=invert
-
 
 class RevAdd(nn.Module):
     def __init__(self, invert=True):
@@ -285,12 +271,13 @@ class RevAdd(nn.Module):
         
     def register_skip(self, skip):
         self.skip = skip
-        if True:#self.invert:
+        if self.invert:
             return skip+0
-        #else:
-        #    return skip
+        else:
+            return skip
         
     def forward(self, x):
+
         out = x + self.skip
         if self.invert:
             if self.training and out.requires_grad:
@@ -347,26 +334,3 @@ class IBroadcast(nn.Module):
             self.inverse(output, x)
             handle_ref[0].remove()
         return backward_hook
-    
-
-class ISkip(nn.Module):
-    def __init__(self, channels, skip_module_fn, invert=True):
-        super().__init__()
-        self.set_invert( invert)
-        if self.invert:
-            self.module = RevBlock(
-                skip_module_fn(channels//2),
-                skip_module_fn(channels//2),
-            )
-            self.module.set_invert(True)
-        else:
-            self.module = skip_module_fn(channels)
-    
-    def forward(self, x):
-        if self.invert:
-            return self.module(x) 
-        else:
-            return x + self.module(x)
-    
-    def set_invert(self, invert):
-        self.invert=invert
