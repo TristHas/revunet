@@ -1,8 +1,8 @@
+from tqdm import tqdm
 import numpy as np
 import torch
 import torch.nn.functional as F
-
-topy = lambda x: torch.from_numpy(x).cuda(device)
+from tensorboardX import SummaryWriter
 
 def pad_size(ks, mode):
     assert mode in ['valid', 'same', 'full']
@@ -47,43 +47,89 @@ def distrib_mod(model):
         res[mod]=len(layers)
     return res
 
-def train(ds):
-    model.train()
-    x,y = ds.sample()
-    x = topy(x)
-    y = topy(y)
-
-    w_pos = y.mean(2, keepdim=True).mean(3, keepdim=True).mean(4, keepdim=True)
-    w_neg = 1 - w_pos
-    msk_pos = (y == 1).float()
-    msk_neg = (y == 0).float()
-    msk = n_msk = msk_pos * w_neg + msk_neg * w_pos
-
-    opt.zero_grad()
-    out = model(x)
-    loss = F.binary_cross_entropy_with_logits(out, y, msk)
-    loss.backward()
-    opt.step()
-    return loss.item()
+class Monitor():
+    def __init__(self, logdir, msk=True, acc=True, loss=True):
+        self.writer = SummaryWriter(logdir)
+        self.loss = loss
+        self.acc = acc
+        self.msk = msk
     
-def valid(ds, nrun=20):
+    def log_train(self, i, loss, msk_stat):
+        self.writer.add_scalar("training_loss", loss, i)
+        mean_msk = 0
+        if self.msk:
+            for i in range(msk_stat.shape[0]):
+                raise NotImplementedError()
+    
+    def log_val(self, i, key, loss_stats, acc_stats, msk_stat):
+        mean_acc  = acc_stats.mean()
+        self.writer.add_scalar("valid_accuracy_{}".format(key), mean_acc, i)
+        mean_loss = loss_stats.mean()
+        self.writer.add_scalar("valid_loss_{}".format(key), mean_loss, i)
+        if self.msk:
+            for i in range(msk_stat.shape[0]):
+                raise NotImplementedError()
+        if self.acc:
+            for i in range(acc_stats.shape[0]):
+                raise NotImplementedError()
+        if self.loss:
+            for i in range(loss_stats.shape[0]):
+                raise NotImplementedError()
+
+def train(model, optimizer, dataset, loss_fn, device=0):
+    model.train()
+    x, y, msk = dataset.sample("train")
+    x, y, msk = map(lambda x:x.cuda(device), [x, y, msk])
+    optimizer.zero_grad()
+    out  = model(x)
+    loss = loss_fn(out, y, msk)
+    loss.backward()
+    optimizer.step()
+    msks = msks_stats(msk)
+    return loss.item(), msks
+
+def valid(model, dataset, loss_fn, device=0, nrun=20):
     model.eval()
     with torch.no_grad():
-        accs = 0
+        losses, accs, msks = [],[],[]
         for i in range(nrun):
-            x,y = ds.sample()
-            x = topy(x)
-            y = topy(y)
-
-            w_pos = y.mean(2, keepdim=True).mean(3, keepdim=True).mean(4, keepdim=True)
-            w_neg = 1 - w_pos
-            msk_pos = (y == 1).float()
-            msk_neg = (y == 0).float()
-            msk = n_msk = msk_pos * w_neg + msk_neg * w_pos
-            
+            x, y, msk = dataset.sample("valid")
+            x, y, msk = map(lambda x:x.cuda(device), [x, y, msk])
             out = model(x)
-            accs += F.binary_cross_entropy_with_logits(out, y, msk).item()
-    return accs / nrun
+            msks.append(msks_stats(msk).unsqueeze(0))
+            losses.append(loss_stats(out, y, msk, loss_fn).unsqueeze(0))
+            accs.append(class_stats(out, y).unsqueeze(0))
+    accs   = torch.cat(accs).mean(0)
+    losses = torch.cat(losses).mean(0)
+    msks   = torch.cat(msks).mean(0)
+    return losses, accs, msks
+
+def experiment(model, opt, train_ds, test_ds, monitor, val_freq=300, niter=30000, loss_fn=None, nvalrun=20, device=0):
+    loss_fn = F.binary_cross_entropy_with_logits if loss_fn is None else loss_fn
+    for i in tqdm(list(range(niter))):
+        a,b = train(model, opt, train_ds, loss_fn, device)
+        monitor.log_train(i, a, b)  
+        if i % val_freq == 0:
+            val_stats = valid(model, train_ds, loss_fn, device, nvalrun)
+            trn_stats = valid(model, test_ds, loss_fn, device, nvalrun)
+            monitor.log_val(i, "valid", *val_stats)  
+            monitor.log_val(i, "train", *trn_stats)  
+
+def loss_stats(out, y, msk, loss_fn):
+    loss = loss_fn(out, y, msk, reduction="none")
+    return reduce(loss)
+            
+def msks_stats(msk):
+    zeros = reduce(msk==0)
+    pos   = reduce(msk>0.5)
+    neg   = reduce((0<msk)&(msk<0.5))
+    return torch.cat(list(map(lambda x:x.unsqueeze(0), [zeros, pos, neg])))
     
-def monitor(name, y, x):
-    writer.add_scalar(name, y, x)
+def class_stats(out, lbl, thr=.5):
+    acc = (out > thr) == lbl.byte()
+    return reduce(acc)
+                          
+def reduce(x):
+    x = x.squeeze().float()
+    x = x.mean(1).mean(1).mean(1)
+    return x
