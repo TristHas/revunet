@@ -110,8 +110,8 @@ def experiment(model, opt, train_ds, test_ds, monitor, val_freq=300, nstart=0, n
         a,b = train(model, opt, train_ds, loss_fn, device)
         monitor.log_train(i, a, b)  
         if i % val_freq == 0:
-            val_stats = valid(model, train_ds, loss_fn, device, nvalrun)
-            trn_stats = valid(model, test_ds, loss_fn, device, nvalrun)
+            val_stats = valid(model, test_ds, loss_fn, device, nvalrun)
+            trn_stats = valid(model, train_ds, loss_fn, device, nvalrun)
             monitor.log_val(i, "valid", *val_stats)  
             monitor.log_val(i, "train", *trn_stats)  
             
