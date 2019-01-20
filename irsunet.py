@@ -36,7 +36,7 @@ class IRSUNet(nn.Module):
         # Expanding Path
         self.expand, self.upsamp =IModuleList(), IModuleList() 
         for d in reversed(range(depth)):
-            self.upsamp.append(UpsampleMod(nfeatures[d+1], nfeatures[d], 
+            self.upsamp.append(UpsampleMod(nfeatures[d+1], nfeatures[d], invert=invert,
                                            up=pool, mode=self.upsample, activation=activation))
             self.expand.append(IConvMod(nfeatures[d], nfeatures[d], 
                                         invert=invert, skip_invert=skip_invert,
