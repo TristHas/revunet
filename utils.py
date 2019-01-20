@@ -104,9 +104,9 @@ def valid(model, dataset, loss_fn, device=0, nrun=20):
     msks   = torch.cat(msks).mean(0)
     return losses, accs, msks
 
-def experiment(model, opt, train_ds, test_ds, monitor, val_freq=300, niter=30000, loss_fn=None, nvalrun=20, device=0):
+def experiment(model, opt, train_ds, test_ds, monitor, val_freq=300, nstart=0, niter=30000, loss_fn=None, nvalrun=20, device=0):
     loss_fn = F.binary_cross_entropy_with_logits if loss_fn is None else loss_fn
-    for i in tqdm(list(range(niter))):
+    for i in tqdm(list(range(nstart, niter))):
         a,b = train(model, opt, train_ds, loss_fn, device)
         monitor.log_train(i, a, b)  
         if i % val_freq == 0:
@@ -114,7 +114,7 @@ def experiment(model, opt, train_ds, test_ds, monitor, val_freq=300, niter=30000
             trn_stats = valid(model, test_ds, loss_fn, device, nvalrun)
             monitor.log_val(i, "valid", *val_stats)  
             monitor.log_val(i, "train", *trn_stats)  
-
+            
 def loss_stats(out, y, msk, loss_fn):
     loss = loss_fn(out, y, msk, reduction="none")
     return reduce(loss)
