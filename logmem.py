@@ -4,6 +4,7 @@ import subprocess
 import torch
 import pandas as pd
 import numpy as np
+import inspect
 
 def get_gpu_mem(synchronize=True, empty_cache=True):
     return torch.cuda.memory_allocated(), torch.cuda.memory_cached()
@@ -56,12 +57,25 @@ def log_mem(model, inp, mem_log, exp):
 def pp(df, exp):
 	df_exp = df[df.exp==exp]
 	df_pprint =(
-		df_exp.assign(open_layer = lambda ddf: ddf.hook_type.map(lambda x: {"pre":0, "fwd":1, "bwd":2}[x]).rolling(2).apply(lambda x: x[0]==0 and x[1] == 0))
-	   	.assign(close_layer = lambda ddf: ddf.hook_type.map(lambda x: {"pre":0, "fwd":1, "bwd":2}[x]).rolling(2).apply(lambda x: x[0]==1 and x[1] == 1))
+		df_exp.assign(
+            open_layer = lambda ddf: ddf.hook_type.map(
+                lambda x: {"pre":0, "fwd":1, "bwd":2}[x]).rolling(2).apply(lambda x: x[0]==0 and x[1] == 0
+            )
+        )
+	   	.assign(
+            close_layer = lambda ddf: ddf.hook_type.map(
+                lambda x: {"pre":0, "fwd":1, "bwd":2}[x]).rolling(2).apply(lambda x: x[0]==1 and x[1] == 1)
+        )
 	   	.assign(indent_level =  lambda ddf: (ddf.open_layer.cumsum() - ddf.close_layer.cumsum()).fillna(0).map(int))
 	   	.sort_values(by = "call_idx")
 	   	.assign(mem_diff = lambda ddf: ddf.mem_all.diff()//2**20)
 	)
-	pprint_lines = [f"{'    '*row[1].indent_level}{row[1].layer_type} {row[1].hook_type}  {row[1].mem_diff or ''}" for row in  df_pprint.iterrows()]
+	pprint_lines = [
+        f"{'    '*row[1].indent_level}{row[1].layer_type} {row[1].hook_type}  {row[1].mem_diff or ''}"
+        for row in  df_pprint.iterrows()
+    ]
 	for x in pprint_lines:
 		print(x)
+              
+def print_code(x):
+    	print(''.join(inspect.getsourcelines(x)[0]))
