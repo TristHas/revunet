@@ -98,7 +98,7 @@ def valid(model, dataset, loss_fn, device=0, nrun=20):
             out = model(x)
             msks.append(msks_stats(msk).unsqueeze(0))
             losses.append(loss_stats(out, y, msk, loss_fn).unsqueeze(0))
-            accs.append(class_stats(out, y).unsqueeze(0))
+            accs.append(class_stats(out, y, msk).unsqueeze(0))
     accs   = torch.cat(accs).mean(0)
     losses = torch.cat(losses).mean(0)
     msks   = torch.cat(msks).mean(0)
@@ -116,14 +116,18 @@ def experiment(model, opt, train_ds, test_ds, monitor, val_freq=300, nstart=0, n
             monitor.log_val(i, "train", *trn_stats)  
             
 def loss_stats(out, y, msk, loss_fn):
-    loss = loss_fn(out, y, msk, reduction="none")
-    return reduce(loss)
-            
-def msks_stats(msk):
-    zeros = reduce(msk==0)
-    pos   = reduce(msk>0.5)
-    neg   = reduce((0<msk)&(msk<0.5))
-    return torch.cat(list(map(lambda x:x.unsqueeze(0), [zeros, pos, neg])))
+    loss = loss_fn(out, y, msk, reduction="none").squeeze()
+    msk  = (msk > 0).squeeze()
+    loss = [loss[i][msk[i]].mean() for i in range(loss.size(0))]
+    loss =  torch.FloatTensor(loss)
+    return loss
+
+def class_stats(out, lbl, msk, thr=.5):
+    msk = (msk > 0).squeeze()
+    acc = ((out > thr) == lbl.byte()).squeeze().float()
+    acc = [acc[i][msk[i]].mean() for i in range(acc.size(0))]
+    acc = torch.FloatTensor(acc)
+    return acc
     
 def class_stats(out, lbl, thr=.5):
     acc = (out > thr) == lbl.byte()
