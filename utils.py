@@ -128,12 +128,20 @@ def class_stats(out, lbl, msk, thr=.5):
     acc = [acc[i][msk[i]].mean() for i in range(acc.size(0))]
     acc = torch.FloatTensor(acc)
     return acc
-    
-def class_stats(out, lbl, thr=.5):
-    acc = (out > thr) == lbl.byte()
-    return reduce(acc)
-                          
+
+def msks_stats(msk):
+    zeros = reduce(msk==0)
+    pos   = reduce(msk>0.5)
+    neg   = reduce((0<msk)&(msk<0.5))
+    return torch.cat(list(map(lambda x:x.unsqueeze(0), [zeros, pos, neg])))
+
 def reduce(x):
     x = x.squeeze().float()
     x = x.mean(1).mean(1).mean(1)
     return x
+
+def margin_loss(out, lbl, msk, thr=.2, reduction='mean'):
+    out  = torch.sigmoid(out)
+    msk2 = (torch.abs(out-lbl) > thr).float()
+    msk  = msk * msk2
+    return F.binary_cross_entropy(out, lbl, msk, reduction=reduction)
