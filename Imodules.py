@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 from .rev_block import RevBlock
 from .utils import pad_size
-from .i_conv import iConv3d
+from .i_conv import IConv3d
 
 
 class ISkip(nn.Module):
