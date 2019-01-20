@@ -3,16 +3,30 @@ import torch.nn as nn
 
 from .rev_block import RevBlock
 
+class Permutation(nn.Module):
+    def __init__(self, channels):
+        super().__init__()
+        self.permut = torch.randperm(channels).cuda(0)
+        
+        self.permut_inv = torch.arange(channels).cuda(0)
+        self.permut_inv[self.permut] = torch.arange(channels).cuda(0)
+        
+    def forward(self, x):
+        return x.index_select(1, self.permut)
+    
+    def inverse(self, y):
+        return y.index_select(1, self.permut_inv)
+
+
 class IConv3d(nn.Module):
-    def __init__(self, in_channels, out_channels, *args, invert=False, add_skip=True, **kwargs):
+    def __init__(self, in_channels, out_channels, *args, invert=True, **kwargs):
         super().__init__()
         self.set_invert(invert)
-        self.add_skip = add_skip
         self.in_channels = in_channels
         self.out_channels = out_channels
         self.args = args
         self.kwargs = kwargs
-
+        self.perm = Permutation(out_channels).cuda(0)
         if self.invert:
             if self.in_channels == self.out_channels:
                 assert (self.in_channels % 2) == 0
@@ -28,7 +42,4 @@ class IConv3d(nn.Module):
     	self.invert = invert
 
     def forward(self, x):
-        if not self.invert and self.add_skip:
-            return x + self.module(x)
-        else:
-            return self.module(x)
+            return self.perm(self.module(x))
