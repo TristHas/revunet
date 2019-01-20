@@ -196,7 +196,6 @@ class IUpsample(nn.Upsample):
         return backward_hook
     
 
-
 class ResidualConvMod(nn.Module):
     def __init__(self, channels, activation=None, 
                  invert=True, nlayer=3, pad=(1,1,1),
@@ -216,10 +215,29 @@ class ResidualConvMod(nn.Module):
         ])
         
         self.invert = invert
-        
+        self.delete_intermediaries = False
+        self.fill_intermediaries = False
+        self.intermediaries = []
+
     def forward(self, x):
-        for layer in self.layers:
-            x = layer(x)
+        if self.delete_intermediaries:
+            self.intermediaries = []
+
+        for i, layer in enumerate(self.layers):
+            y = layer(x)
+            if self.fill_intermediaries:
+                self.intermediaries[i].data.set_(y)
+            
+            if self.delete_intermediaries:
+                self.intermediaries.append(y)
+                if i>0:
+                    x.data.set_()
+                
+            x = y
+        
+        if self.fill_intermediaries:
+            del self.intermediaries
+
         return x
 
 

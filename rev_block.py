@@ -18,7 +18,6 @@ class Checkpoint(object):
     def drop(self):
         self.cp.data.set_()
 
-
 class RevBlock(nn.Module):
 
     def __init__(self, F_module, G_module, invert=True):
@@ -30,6 +29,10 @@ class RevBlock(nn.Module):
         self.set_invert(invert)
 
     def forward(self, x):
+        setattr(self.F_module, "delete_intermediaries",  True)
+        setattr(self.G_module, "delete_intermediaries",  True)
+        
+        
         x1, x2 = torch.chunk(x, 2, dim=1)
         if self.invert:
             x.data.set_()
@@ -60,9 +63,14 @@ class RevBlock(nn.Module):
                 handle_ref = []
                 handle_ref.append(y.register_hook(self.get_variable_backward_hook((x, x1, x2, F_x2, y1, G_y1, y2), y, handle_ref)))
 
+                
+        setattr(self.F_module, "delete_intermediaries", False)
+        setattr(self.G_module, "delete_intermediaries",False)
         return y
 
     def inverse(self, output, inp):
+        setattr(self.F_module, "fill_intermediaries", not getattr(self.F_module, "invert", False))
+        setattr(self.G_module, "fill_intermediaries", not getattr(self.G_module, "invert", False))
         x, x1, x2, F_x2, y1, G_y1, y2 = inp
         
         y1_data, y2_data = torch.chunk(output, 2, dim=1)
@@ -88,6 +96,10 @@ class RevBlock(nn.Module):
             x2.data.set_(x2_data)
             self.cp1.drop()
             self.cp2.drop()
+        
+        
+        setattr(self.F_module, "fill_intermediaries",  False)
+        setattr(self.G_module, "fill_intermediaries", False)
 
     def get_variable_backward_hook(self, inp_to_fill, output, handle_ref):
         def backward_hook(grad):
