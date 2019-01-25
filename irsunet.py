@@ -15,7 +15,7 @@ class IRSUNet(nn.Module):
                  ks=(3,3,3), embed_ks=(1,5,5), 
                  activation=None, invert=True, skip_invert=True,
                  nfeatures = [24,32,48,72,104,144],
-                 upsample='bilinear', pool=(1,2,2)):
+                 upsample='bilinear', pool=(1,2,2), nlayer=3):
         super(IRSUNet, self).__init__()
         activation      = ILeakyReLU(invert=invert) if activation is None else activation
         self.upsample   = upsample
@@ -27,11 +27,11 @@ class IRSUNet(nn.Module):
         self.embed_in = EmbeddingMod(1, nfeatures[0], embed_ks, activation=activation)
         self.contract = IModuleList([IConvMod(nfeatures[0], nfeatures[0], 
                                               invert=invert, skip_invert=skip_invert,
-                                              activation=activation, ks=ks)])
+                                              activation=activation, ks=ks, nlayer=nlayer)])
         for d in range(depth):
             self.contract.append(IConvMod(nfeatures[d], nfeatures[d+1], 
                                           invert=invert, skip_invert=skip_invert,
-                                          activation=activation, ks=ks))
+                                          activation=activation, ks=ks, nlayer=nlayer))
         
         # Expanding Path
         self.expand, self.upsamp =IModuleList(), IModuleList() 
@@ -40,7 +40,7 @@ class IRSUNet(nn.Module):
                                            up=pool, mode=self.upsample, activation=activation))
             self.expand.append(IConvMod(nfeatures[d], nfeatures[d], 
                                         invert=invert, skip_invert=skip_invert,
-                                        activation=activation, ks=ks))
+                                        activation=activation, ks=ks, nlayer=nlayer))
 
         # Output feature embedding without batchnorm.
         self.embed_out = EmbeddingMod(nfeatures[0], nfeatures[0], embed_ks, activation=activation)
