@@ -80,7 +80,11 @@ class IBatchNorm3d(nn.BatchNorm3d):
             x_ = x.view(x.size(0), x.size(1), -1)
             mean, std = x_.mean(2).squeeze(), x_.std(2).squeeze()
             
-        out = super().forward(x)
+        out = F.batch_norm( 
+            x, None, None, self.weight.abs() + self.ieps, self.bias, 
+            True, 0.0, self.eps
+        )
+
         if self.training and out.requires_grad:
             handle_ref = [0]
             handle_ref_ = out.register_hook(self.get_variable_backward_hook(x, out, std, mean, handle_ref))
@@ -92,7 +96,7 @@ class IBatchNorm3d(nn.BatchNorm3d):
         with torch.no_grad():
             x_ =  F.batch_norm(
                         y, None, None, std, mean, 
-                        True, 0.0, self.ieps
+                        True, 0.0, 0
                     )
         x.data.set_(x_)
         y.data.set_()
@@ -197,12 +201,12 @@ class IUpsample(nn.Upsample):
     
 
 class ResidualConvMod(nn.Module):
-    def __init__(self, channels, activation=None, 
+    def __init__(self, channels, activation=None, bn_ieps=0.1
                  invert=True, nlayer=3, pad=(1,1,1),
                  ks=(3,3,3), bias=False, bn_stats=False, st=(1,1,1)):
         super().__init__()
         layers = [(
-            IBatchNorm3d(channels, track_running_stats=bn_stats, invert=invert),
+            IBatchNorm3d(channels, track_running_stats=bn_stats, invert=invert, ieps=bn_ieps),
             activation,
             IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias, invert=invert),
         )
@@ -242,7 +246,7 @@ class IConvMod(nn.Module):
         Convolution module.
     """
     def __init__(self, in_channels, out_channels, activation=None, 
-                       invert=True, skip_invert=True,
+                       invert=True, skip_invert=True, bn_ieps=0.1,
                        nlayer=3, ks=(3,3,3), bias=False, bn_stats=False):
         super().__init__()
         st   = (1,1,1)
@@ -253,13 +257,13 @@ class IConvMod(nn.Module):
 
         self.conv = IModuleList([nn.Conv3d(in_channels,  out_channels, kernel_size=ks, stride=st, padding=pad, bias=bias)])
         self.bn   = IModuleList([
-            IBatchNorm3d(out_channels, track_running_stats=bn_stats, invert=invert),
-            IBatchNorm3d(out_channels, track_running_stats=bn_stats, invert=invert),
+            IBatchNorm3d(out_channels, track_running_stats=bn_stats, invert=invert, ieps=bn_ieps),
+            IBatchNorm3d(out_channels, track_running_stats=bn_stats, invert=invert, ieps=bn_ieps),
         ])
 
         residual_module_fn = lambda channels: ResidualConvMod(
                  channels=channels, activation=self.activation, 
-                 invert=invert, nlayer=nlayer, pad=pad,
+                 invert=invert, nlayer=nlayer, pad=pad, bn_ieps=bn_ieps,
                  ks=ks, bias=bias, bn_stats=bn_stats, st=st)
 
         self.skip = ISkip(out_channels, residual_module_fn, skip_invert=skip_invert, invert=invert)

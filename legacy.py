@@ -41,7 +41,7 @@ class UpsampleMod(nn.Module):
     """
     """
     def __init__(self, in_channels, out_channels, up=(1,2,2), mode='bilinear',
-                 activation=F.elu, bn_stats=False, invert=False):
+                 activation=F.elu, bn_stats=False, invert=False, bn_ieps=0.1):
         super(UpsampleMod, self).__init__()
         # Convolution params.
         ks = (1,1,1)
@@ -62,7 +62,7 @@ class UpsampleMod(nn.Module):
         else:
             assert False, "unknown upsampling mode {}".format(mode)
         # BatchNorm and activation.
-        self.bn = IBatchNorm3d(out_channels, invert=invert, track_running_stats=bn_stats)
+        self.bn = IBatchNorm3d(out_channels, invert=invert, track_running_stats=bn_stats, ieps=bn_ieps)
         self.activation = activation
 
     def forward(self, x, skip):
