@@ -65,7 +65,7 @@ def affinitize(img, ret=None, dst=(1,1,1), dtype='float32'):
             s1.append(slice(-dst[i], None))
             s2.append(slice(None,  dst[i]))
 
-    ret[s0] = (img[s1]==img[s2]) & (img[s1]>0)
+    ret[tuple(s0)] = (img[tuple(s1)]==img[tuple(s2)]) & (img[tuple(s1)]>0)
     return ret[np.newaxis,...]
 
 def affinitize_mask(msk, ret=None, dst=(1,1,1), dtype='float32'):
@@ -103,7 +103,7 @@ def affinitize_mask(msk, ret=None, dst=(1,1,1), dtype='float32'):
             s1.append(slice(-dst[i], None))
             s2.append(slice(None,  dst[i]))
 
-    ret[s0] = (msk[s1]>0) & (msk[s2]>0)
+    ret[tuple(s0)] = (msk[tuple(s1)]>0) & (msk[tuple(s2)]>0)
     return ret[np.newaxis,...]
 
 def rebalance_binary_class(img, msk=None, base_w=0.0, dtype='float32'):
