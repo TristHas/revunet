@@ -1,7 +1,3 @@
-"""
-    Adapted from ELEKTRONN (http://elektronn.org/).
-"""
-
 import numpy as np
 
 cdef extern from 'warping.c':

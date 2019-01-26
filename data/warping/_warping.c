@@ -6,12 +6,12 @@
         "depends": [
             "warping.c"
         ],
-        "name": "warping._warping",
+        "name": "revunet.data.warping._warping",
         "sources": [
             "_warping.pyx"
         ]
     },
-    "module_name": "warping._warping"
+    "module_name": "revunet.data.warping._warping"
 }
 END: Cython Metadata */
 
@@ -620,8 +620,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__warping___warping
-#define __PYX_HAVE_API__warping___warping
+#define __PYX_HAVE__revunet__data__warping___warping
+#define __PYX_HAVE_API__revunet__data__warping___warping
 /* Early includes */
 #include "warping.c"
 #include "pythread.h"
@@ -1756,7 +1756,7 @@ static PyObject *__pyx_memoryview_assign_item_from_object(struct __pyx_memoryvie
 static PyObject *__pyx_memoryviewslice_convert_item_to_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp); /* proto*/
 static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp, PyObject *__pyx_v_value); /* proto*/
 
-/* Module declarations from 'warping._warping' */
+/* Module declarations from 'revunet.data.warping._warping' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1803,11 +1803,11 @@ static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_float = { "float", NULL, sizeof(float), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
-#define __Pyx_MODULE_NAME "warping._warping"
-extern int __pyx_module_is_main_warping___warping;
-int __pyx_module_is_main_warping___warping = 0;
+#define __Pyx_MODULE_NAME "revunet.data.warping._warping"
+extern int __pyx_module_is_main_revunet__data__warping___warping;
+int __pyx_module_is_main_revunet__data__warping___warping = 0;
 
-/* Implementation of 'warping._warping' */
+/* Implementation of 'revunet.data.warping._warping' */
 static PyObject *__pyx_builtin_map;
 static PyObject *__pyx_builtin_zip;
 static PyObject *__pyx_builtin_ValueError;
@@ -1925,7 +1925,6 @@ static const char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static const char __pyx_k_dtype_is_object[] = "dtype_is_object";
 static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
-static const char __pyx_k_warping__warping[] = "warping._warping";
 static const char __pyx_k_ascontiguousarray[] = "ascontiguousarray";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -1940,9 +1939,9 @@ static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_warp2dFastLab_locals_lambda[] = "_warp2dFastLab.<locals>.<lambda>";
 static const char __pyx_k_warp3dFastLab_locals_lambda[] = "_warp3dFastLab.<locals>.<lambda>";
+static const char __pyx_k_revunet_data_warping__warping[] = "revunet.data.warping._warping";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
 static const char __pyx_k_strided_and_direct_or_indirect[] = "<strided and direct or indirect>";
-static const char __pyx_k_Adapted_from_ELEKTRONN_http_ele[] = "\n    Adapted from ELEKTRONN (http://elektronn.org/).\n";
 static const char __pyx_k_Buffer_view_does_not_expose_stri[] = "Buffer view does not expose strides";
 static const char __pyx_k_Can_only_create_a_buffer_that_is[] = "Can only create a buffer that is contiguous in memory.";
 static const char __pyx_k_Cannot_assign_to_read_only_memor[] = "Cannot assign to read-only memoryview";
@@ -2059,6 +2058,7 @@ static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
 static PyObject *__pyx_n_s_reduce_ex;
+static PyObject *__pyx_n_s_revunet_data_warping__warping;
 static PyObject *__pyx_n_s_rot;
 static PyObject *__pyx_n_s_scale;
 static PyObject *__pyx_n_s_scale_ptr;
@@ -2091,17 +2091,16 @@ static PyObject *__pyx_n_s_warp2dFastLab_locals_lambda;
 static PyObject *__pyx_n_s_warp3dFast;
 static PyObject *__pyx_n_s_warp3dFastLab;
 static PyObject *__pyx_n_s_warp3dFastLab_locals_lambda;
-static PyObject *__pyx_n_s_warping__warping;
 static PyObject *__pyx_kp_s_warping_pyx;
 static PyObject *__pyx_n_s_zeros;
 static PyObject *__pyx_n_s_zip;
-static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch); /* proto */
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
-static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch); /* proto */
-static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist); /* proto */
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch); /* proto */
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda2(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
-static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist); /* proto */
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2195,7 +2194,7 @@ static PyObject *__pyx_codeobj__31;
 static PyObject *__pyx_codeobj__38;
 /* Late includes */
 
-/* "warping/_warping.pyx":27
+/* "revunet/data/warping/_warping.pyx":23
  * 
  * 
  * def warp2dFast(img, patch_size, rot=0, shear=0, scale=(1,1), stretch=(0,0)):             # <<<<<<<<<<<<<<
@@ -2204,10 +2203,10 @@ static PyObject *__pyx_codeobj__38;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_7warping_8_warping_warp2dFast[] = "\n    Create warped mapping for a spatial 2D input image.\n    The transformation is done w.r.t to the *center* of the image.\n\n    Parameters\n    ----------\n\n    img: array\n      The array must be 3-dimensional (ch,x,y) and larger/equal the patch size\n    patch_size: 2-tuple\n      Patch size *excluding* channel: (px, py).\n      The warping result of the input image is cropped to this size\n    rot: float\n      Rotation angle in deg for rotation around z-axis\n    shear: float\n      Shear angle in deg for shear w.r.t xy-diagonal\n    scale: 2-tuple of float\n      Scale per axis\n    stretch: 2-tuple of float\n      Fraction of perspective stretching from the center (where stretching is always 1)\n      to the outer border of image per axis. The 4 entry correspond to:\n\n      - X stretching depending on Y\n      - Y stretching depending on X\n\n\n    Returns\n    -------\n\n    img: np.ndarray\n      Warped image (cropped to patch_size)\n    ";
-static PyMethodDef __pyx_mdef_7warping_8_warping_1warp2dFast = {"warp2dFast", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7warping_8_warping_1warp2dFast, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7warping_8_warping_warp2dFast};
-static PyObject *__pyx_pw_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7revunet_4data_7warping_8_warping_warp2dFast[] = "\n    Create warped mapping for a spatial 2D input image.\n    The transformation is done w.r.t to the *center* of the image.\n\n    Parameters\n    ----------\n\n    img: array\n      The array must be 3-dimensional (ch,x,y) and larger/equal the patch size\n    patch_size: 2-tuple\n      Patch size *excluding* channel: (px, py).\n      The warping result of the input image is cropped to this size\n    rot: float\n      Rotation angle in deg for rotation around z-axis\n    shear: float\n      Shear angle in deg for shear w.r.t xy-diagonal\n    scale: 2-tuple of float\n      Scale per axis\n    stretch: 2-tuple of float\n      Fraction of perspective stretching from the center (where stretching is always 1)\n      to the outer border of image per axis. The 4 entry correspond to:\n\n      - X stretching depending on Y\n      - Y stretching depending on X\n\n\n    Returns\n    -------\n\n    img: np.ndarray\n      Warped image (cropped to patch_size)\n    ";
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_1warp2dFast = {"warp2dFast", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7revunet_4data_7warping_8_warping_1warp2dFast, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7revunet_4data_7warping_8_warping_warp2dFast};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_img = 0;
   PyObject *__pyx_v_patch_size = 0;
   PyObject *__pyx_v_rot = 0;
@@ -2252,7 +2251,7 @@ static PyObject *__pyx_pw_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, P
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_patch_size)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp2dFast", 0, 2, 6, 1); __PYX_ERR(0, 27, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp2dFast", 0, 2, 6, 1); __PYX_ERR(0, 23, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -2280,7 +2279,7 @@ static PyObject *__pyx_pw_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, P
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp2dFast") < 0)) __PYX_ERR(0, 27, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp2dFast") < 0)) __PYX_ERR(0, 23, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2307,20 +2306,20 @@ static PyObject *__pyx_pw_7warping_8_warping_1warp2dFast(PyObject *__pyx_self, P
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("warp2dFast", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 27, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("warp2dFast", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 23, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("warping._warping.warp2dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping.warp2dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7warping_8_warping_warp2dFast(__pyx_self, __pyx_v_img, __pyx_v_patch_size, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch);
+  __pyx_r = __pyx_pf_7revunet_4data_7warping_8_warping_warp2dFast(__pyx_self, __pyx_v_img, __pyx_v_patch_size, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch) {
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch) {
   __Pyx_memviewslice __pyx_v_scale_view = { 0, 0, { 0 }, { 0 }, { 0 } };
   float *__pyx_v_scale_ptr;
   __Pyx_memviewslice __pyx_v_stretch_view = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -2365,7 +2364,7 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __Pyx_INCREF(__pyx_v_scale);
   __Pyx_INCREF(__pyx_v_stretch);
 
-  /* "warping/_warping.pyx":60
+  /* "revunet/data/warping/_warping.pyx":56
  *       Warped image (cropped to patch_size)
  *     """
  *     assert len(img.shape)==3             # <<<<<<<<<<<<<<
@@ -2374,88 +2373,88 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
  */
   #ifndef CYTHON_WITHOUT_ASSERTIONS
   if (unlikely(!Py_OptimizeFlag)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 60, __pyx_L1_error)
+    __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!((__pyx_t_2 == 3) != 0))) {
       PyErr_SetNone(PyExc_AssertionError);
-      __PYX_ERR(0, 60, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "warping/_warping.pyx":61
+  /* "revunet/data/warping/_warping.pyx":57
  *     """
  *     assert len(img.shape)==3
  *     rot   = rot   * np.pi / 180             # <<<<<<<<<<<<<<
  *     shear = shear * np.pi / 180
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_rot, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":62
+  /* "revunet/data/warping/_warping.pyx":58
  *     assert len(img.shape)==3
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180             # <<<<<<<<<<<<<<
  * 
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_pi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_pi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_180); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_180); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF_SET(__pyx_v_shear, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":64
+  /* "revunet/data/warping/_warping.pyx":60
  *     shear = shear * np.pi / 180
  * 
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     scale   = 1.0/scale
  *     cdef float [:] scale_view = scale
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_scale);
   __Pyx_GIVEREF(__pyx_v_scale);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_scale);
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 64, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -2463,31 +2462,31 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "warping/_warping.pyx":65
+  /* "revunet/data/warping/_warping.pyx":61
  * 
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale   = 1.0/scale             # <<<<<<<<<<<<<<
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]
  */
-  __pyx_t_6 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "warping/_warping.pyx":66
+  /* "revunet/data/warping/_warping.pyx":62
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale   = 1.0/scale
  *     cdef float [:] scale_view = scale             # <<<<<<<<<<<<<<
  *     cdef float * scale_ptr = &scale_view[0]
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 62, __pyx_L1_error)
   __pyx_v_scale_view = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "warping/_warping.pyx":67
+  /* "revunet/data/warping/_warping.pyx":63
  *     scale   = 1.0/scale
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]             # <<<<<<<<<<<<<<
@@ -2502,39 +2501,39 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_8 >= __pyx_v_scale_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 67, __pyx_L1_error)
+    __PYX_ERR(0, 63, __pyx_L1_error)
   }
   __pyx_v_scale_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_scale_view.data + __pyx_t_8 * __pyx_v_scale_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":69
+  /* "revunet/data/warping/_warping.pyx":65
  *     cdef float * scale_ptr = &scale_view[0]
  * 
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(__pyx_v_stretch);
   __Pyx_GIVEREF(__pyx_v_stretch);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_stretch);
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -2542,19 +2541,19 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __Pyx_DECREF_SET(__pyx_v_stretch, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":70
+  /* "revunet/data/warping/_warping.pyx":66
  * 
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch             # <<<<<<<<<<<<<<
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 66, __pyx_L1_error)
   __pyx_v_stretch_view = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "warping/_warping.pyx":71
+  /* "revunet/data/warping/_warping.pyx":67
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]             # <<<<<<<<<<<<<<
@@ -2569,37 +2568,37 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_10 >= __pyx_v_stretch_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 71, __pyx_L1_error)
+    __PYX_ERR(0, 67, __pyx_L1_error)
   }
   __pyx_v_stretch_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_stretch_view.data + __pyx_t_10 * __pyx_v_stretch_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":73
+  /* "revunet/data/warping/_warping.pyx":69
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  *     img = np.ascontiguousarray(img, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     cdef float [:, :, :] img_view = img
  *     cdef float * in_ptr = &img_view[0, 0, 0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_img);
   __Pyx_GIVEREF(__pyx_v_img);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_img);
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -2607,19 +2606,19 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __Pyx_DECREF_SET(__pyx_v_img, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":74
+  /* "revunet/data/warping/_warping.pyx":70
  * 
  *     img = np.ascontiguousarray(img, dtype=np.float32)
  *     cdef float [:, :, :] img_view = img             # <<<<<<<<<<<<<<
  *     cdef float * in_ptr = &img_view[0, 0, 0]
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 74, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 70, __pyx_L1_error)
   __pyx_v_img_view = __pyx_t_11;
   __pyx_t_11.memview = NULL;
   __pyx_t_11.data = NULL;
 
-  /* "warping/_warping.pyx":75
+  /* "revunet/data/warping/_warping.pyx":71
  *     img = np.ascontiguousarray(img, dtype=np.float32)
  *     cdef float [:, :, :] img_view = img
  *     cdef float * in_ptr = &img_view[0, 0, 0]             # <<<<<<<<<<<<<<
@@ -2644,50 +2643,50 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_14 >= __pyx_v_img_view.shape[2])) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 75, __pyx_L1_error)
+    __PYX_ERR(0, 71, __pyx_L1_error)
   }
   __pyx_v_in_ptr = (&(*((float *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_img_view.data + __pyx_t_12 * __pyx_v_img_view.strides[0]) ) + __pyx_t_13 * __pyx_v_img_view.strides[1]) ) + __pyx_t_14 * __pyx_v_img_view.strides[2]) ))));
 
-  /* "warping/_warping.pyx":77
+  /* "revunet/data/warping/_warping.pyx":73
  *     cdef float * in_ptr = &img_view[0, 0, 0]
  * 
  *     cdef int [:] in_sh_view = np.ascontiguousarray(img.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_int32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_int32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_in_sh_view = __pyx_t_15;
   __pyx_t_15.memview = NULL;
   __pyx_t_15.data = NULL;
 
-  /* "warping/_warping.pyx":78
+  /* "revunet/data/warping/_warping.pyx":74
  * 
  *     cdef int [:] in_sh_view = np.ascontiguousarray(img.shape, dtype=np.int32)
  *     cdef int * in_sh_ptr = &in_sh_view[0]             # <<<<<<<<<<<<<<
@@ -2702,53 +2701,53 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_16 >= __pyx_v_in_sh_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 78, __pyx_L1_error)
+    __PYX_ERR(0, 74, __pyx_L1_error)
   }
   __pyx_v_in_sh_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_in_sh_view.data + __pyx_t_16 * __pyx_v_in_sh_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":80
+  /* "revunet/data/warping/_warping.pyx":76
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  *     out_arr = np.zeros((img.shape[0],)+tuple(patch_size), dtype=np.float32)             # <<<<<<<<<<<<<<
  *     cdef float [:, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PySequence_Tuple(__pyx_v_patch_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PySequence_Tuple(__pyx_v_patch_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyNumber_Add(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_6 = PyNumber_Add(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_6);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6);
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -2756,19 +2755,19 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __pyx_v_out_arr = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":81
+  /* "revunet/data/warping/_warping.pyx":77
  * 
  *     out_arr = np.zeros((img.shape[0],)+tuple(patch_size), dtype=np.float32)
  *     cdef float [:, :, :] out_view = out_arr             # <<<<<<<<<<<<<<
  *     cdef float * out_ptr = &out_view[0, 0, 0]
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 77, __pyx_L1_error)
   __pyx_v_out_view = __pyx_t_11;
   __pyx_t_11.memview = NULL;
   __pyx_t_11.data = NULL;
 
-  /* "warping/_warping.pyx":82
+  /* "revunet/data/warping/_warping.pyx":78
  *     out_arr = np.zeros((img.shape[0],)+tuple(patch_size), dtype=np.float32)
  *     cdef float [:, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0]             # <<<<<<<<<<<<<<
@@ -2793,50 +2792,50 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_19 >= __pyx_v_out_view.shape[2])) __pyx_t_9 = 2;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 82, __pyx_L1_error)
+    __PYX_ERR(0, 78, __pyx_L1_error)
   }
   __pyx_v_out_ptr = (&(*((float *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_out_view.data + __pyx_t_17 * __pyx_v_out_view.strides[0]) ) + __pyx_t_18 * __pyx_v_out_view.strides[1]) ) + __pyx_t_19 * __pyx_v_out_view.strides[2]) ))));
 
-  /* "warping/_warping.pyx":84
+  /* "revunet/data/warping/_warping.pyx":80
  *     cdef float * out_ptr = &out_view[0, 0, 0]
  * 
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * ps_ptr  = &ps_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_ps_view = __pyx_t_15;
   __pyx_t_15.memview = NULL;
   __pyx_t_15.data = NULL;
 
-  /* "warping/_warping.pyx":85
+  /* "revunet/data/warping/_warping.pyx":81
  * 
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)
  *     cdef int * ps_ptr  = &ps_view[0]             # <<<<<<<<<<<<<<
@@ -2851,22 +2850,22 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   } else if (unlikely(__pyx_t_20 >= __pyx_v_ps_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 85, __pyx_L1_error)
+    __PYX_ERR(0, 81, __pyx_L1_error)
   }
   __pyx_v_ps_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_ps_view.data + __pyx_t_20 * __pyx_v_ps_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":87
+  /* "revunet/data/warping/_warping.pyx":83
  *     cdef int * ps_ptr  = &ps_view[0]
  * 
  *     fastwarp2d_opt(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear, scale_ptr, stretch_ptr)             # <<<<<<<<<<<<<<
  *     return out_arr
  * 
  */
-  __pyx_t_21 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_21 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L1_error)
-  __pyx_t_22 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_22 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L1_error)
+  __pyx_t_21 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_21 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_22 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_22 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L1_error)
   (void)(fastwarp2d_opt(__pyx_v_in_ptr, __pyx_v_out_ptr, __pyx_v_in_sh_ptr, __pyx_v_ps_ptr, __pyx_t_21, __pyx_t_22, __pyx_v_scale_ptr, __pyx_v_stretch_ptr));
 
-  /* "warping/_warping.pyx":88
+  /* "revunet/data/warping/_warping.pyx":84
  * 
  *     fastwarp2d_opt(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear, scale_ptr, stretch_ptr)
  *     return out_arr             # <<<<<<<<<<<<<<
@@ -2878,7 +2877,7 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __pyx_r = __pyx_v_out_arr;
   goto __pyx_L0;
 
-  /* "warping/_warping.pyx":27
+  /* "revunet/data/warping/_warping.pyx":23
  * 
  * 
  * def warp2dFast(img, patch_size, rot=0, shear=0, scale=(1,1), stretch=(0,0)):             # <<<<<<<<<<<<<<
@@ -2896,7 +2895,7 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_15, 1);
-  __Pyx_AddTraceback("warping._warping.warp2dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping.warp2dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_scale_view, 1);
@@ -2916,7 +2915,7 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":91
+/* "revunet/data/warping/_warping.pyx":87
  * 
  * 
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):             # <<<<<<<<<<<<<<
@@ -2925,9 +2924,9 @@ static PyObject *__pyx_pf_7warping_8_warping_warp2dFast(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7warping_8_warping_3_warp2dFastLab = {"_warp2dFastLab", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7warping_8_warping_3_warp2dFastLab, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_3_warp2dFastLab = {"_warp2dFastLab", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7revunet_4data_7warping_8_warping_3_warp2dFastLab, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_lab = 0;
   PyObject *__pyx_v_patch_size = 0;
   PyObject *__pyx_v_img_sh = 0;
@@ -2971,41 +2970,41 @@ static PyObject *__pyx_pw_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_patch_size)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 1); __PYX_ERR(0, 91, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 1); __PYX_ERR(0, 87, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_img_sh)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 2); __PYX_ERR(0, 91, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 2); __PYX_ERR(0, 87, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rot)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 3); __PYX_ERR(0, 91, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 3); __PYX_ERR(0, 87, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shear)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 4); __PYX_ERR(0, 91, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 4); __PYX_ERR(0, 87, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_scale)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 5); __PYX_ERR(0, 91, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 5); __PYX_ERR(0, 87, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_stretch)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 6); __PYX_ERR(0, 91, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, 6); __PYX_ERR(0, 87, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_warp2dFastLab") < 0)) __PYX_ERR(0, 91, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_warp2dFastLab") < 0)) __PYX_ERR(0, 87, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 7) {
       goto __pyx_L5_argtuple_error;
@@ -3028,20 +3027,20 @@ static PyObject *__pyx_pw_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 91, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_warp2dFastLab", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 87, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("warping._warping._warp2dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp2dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7warping_8_warping_2_warp2dFastLab(__pyx_self, __pyx_v_lab, __pyx_v_patch_size, __pyx_v_img_sh, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch);
+  __pyx_r = __pyx_pf_7revunet_4data_7warping_8_warping_2_warp2dFastLab(__pyx_self, __pyx_v_lab, __pyx_v_patch_size, __pyx_v_img_sh, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":105
+/* "revunet/data/warping/_warping.pyx":101
  * 
  *     new_lab = np.zeros((1,)+img_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab.shape)))             # <<<<<<<<<<<<<<
@@ -3050,9 +3049,9 @@ static PyObject *__pyx_pw_7warping_8_warping_3_warp2dFastLab(PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_14_warp2dFastLab_lambda(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_7warping_8_warping_14_warp2dFastLab_lambda = {"lambda", (PyCFunction)__pyx_pw_7warping_8_warping_14_warp2dFastLab_lambda, METH_O, 0};
-static PyObject *__pyx_pw_7warping_8_warping_14_warp2dFastLab_lambda(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_14_warp2dFastLab_lambda(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_14_warp2dFastLab_lambda = {"lambda", (PyCFunction)__pyx_pw_7revunet_4data_7warping_8_warping_14_warp2dFastLab_lambda, METH_O, 0};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_14_warp2dFastLab_lambda(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda (wrapper)", 0);
@@ -3071,15 +3070,15 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("lambda", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_FloorDivideObjC(__pyx_t_3, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_FloorDivideObjC(__pyx_t_3, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
@@ -3091,7 +3090,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("warping._warping._warp2dFastLab.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp2dFastLab.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3099,7 +3098,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":114
+/* "revunet/data/warping/_warping.pyx":110
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  *     out_shape = list(map(lambda x: x[0]-2*x[1], zip(patch_size, off)))             # <<<<<<<<<<<<<<
@@ -3108,9 +3107,9 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_14_warp2dFastLab_1lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_7warping_8_warping_14_warp2dFastLab_1lambda1 = {"lambda1", (PyCFunction)__pyx_pw_7warping_8_warping_14_warp2dFastLab_1lambda1, METH_O, 0};
-static PyObject *__pyx_pw_7warping_8_warping_14_warp2dFastLab_1lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_14_warp2dFastLab_1lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_14_warp2dFastLab_1lambda1 = {"lambda1", (PyCFunction)__pyx_pw_7revunet_4data_7warping_8_warping_14_warp2dFastLab_1lambda1, METH_O, 0};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_14_warp2dFastLab_1lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda1 (wrapper)", 0);
@@ -3129,14 +3128,14 @@ static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("lambda1", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Multiply(__pyx_int_2, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_int_2, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3149,7 +3148,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("warping._warping._warp2dFastLab.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp2dFastLab.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3157,7 +3156,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":91
+/* "revunet/data/warping/_warping.pyx":87
  * 
  * 
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):             # <<<<<<<<<<<<<<
@@ -3165,7 +3164,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self
  *     shear = shear * np.pi / 180
  */
 
-static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch) {
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch) {
   __Pyx_memviewslice __pyx_v_scale_view = { 0, 0, { 0 }, { 0 }, { 0 } };
   float *__pyx_v_scale_ptr;
   __Pyx_memviewslice __pyx_v_stretch_view = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -3212,77 +3211,77 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_scale);
   __Pyx_INCREF(__pyx_v_stretch);
 
-  /* "warping/_warping.pyx":92
+  /* "revunet/data/warping/_warping.pyx":88
  * 
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):
  *     rot   = rot   * np.pi / 180             # <<<<<<<<<<<<<<
  *     shear = shear * np.pi / 180
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_rot, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":93
+  /* "revunet/data/warping/_warping.pyx":89
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180             # <<<<<<<<<<<<<<
  * 
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_int_180); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_int_180); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF_SET(__pyx_v_shear, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":95
+  /* "revunet/data/warping/_warping.pyx":91
  *     shear = shear * np.pi / 180
  * 
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     scale   = 1.0/scale
  *     cdef float [:] scale_view = scale
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_scale);
   __Pyx_GIVEREF(__pyx_v_scale);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_scale);
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3290,31 +3289,31 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":96
+  /* "revunet/data/warping/_warping.pyx":92
  * 
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale   = 1.0/scale             # <<<<<<<<<<<<<<
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]
  */
-  __pyx_t_5 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":97
+  /* "revunet/data/warping/_warping.pyx":93
  *     scale   = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale   = 1.0/scale
  *     cdef float [:] scale_view = scale             # <<<<<<<<<<<<<<
  *     cdef float * scale_ptr = &scale_view[0]
  * 
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 93, __pyx_L1_error)
   __pyx_v_scale_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "warping/_warping.pyx":98
+  /* "revunet/data/warping/_warping.pyx":94
  *     scale   = 1.0/scale
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]             # <<<<<<<<<<<<<<
@@ -3329,39 +3328,39 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_7 >= __pyx_v_scale_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 98, __pyx_L1_error)
+    __PYX_ERR(0, 94, __pyx_L1_error)
   }
   __pyx_v_scale_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_scale_view.data + __pyx_t_7 * __pyx_v_scale_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":100
+  /* "revunet/data/warping/_warping.pyx":96
  *     cdef float * scale_ptr = &scale_view[0]
  * 
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_stretch);
   __Pyx_GIVEREF(__pyx_v_stretch);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_stretch);
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 100, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 100, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 100, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 96, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -3369,19 +3368,19 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __Pyx_DECREF_SET(__pyx_v_stretch, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":101
+  /* "revunet/data/warping/_warping.pyx":97
  * 
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch             # <<<<<<<<<<<<<<
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 97, __pyx_L1_error)
   __pyx_v_stretch_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "warping/_warping.pyx":102
+  /* "revunet/data/warping/_warping.pyx":98
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]             # <<<<<<<<<<<<<<
@@ -3396,39 +3395,39 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_9 >= __pyx_v_stretch_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 102, __pyx_L1_error)
+    __PYX_ERR(0, 98, __pyx_L1_error)
   }
   __pyx_v_stretch_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_stretch_view.data + __pyx_t_9 * __pyx_v_stretch_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":104
+  /* "revunet/data/warping/_warping.pyx":100
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  *     new_lab = np.zeros((1,)+img_sh, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab.shape)))
  *     new_lab[0, off[0]:lab.shape[0]+off[0], off[1]:lab.shape[1]+off[1]] = lab
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_tuple__3, __pyx_v_img_sh); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_tuple__3, __pyx_v_img_sh); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 104, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -3436,18 +3435,18 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __pyx_v_new_lab = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":105
+  /* "revunet/data/warping/_warping.pyx":101
  * 
  *     new_lab = np.zeros((1,)+img_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab.shape)))             # <<<<<<<<<<<<<<
  *     new_lab[0, off[0]:lab.shape[0]+off[0], off[1]:lab.shape[1]+off[1]] = lab
  *     lab = new_lab
  */
-  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7warping_8_warping_14_warp2dFastLab_lambda, 0, __pyx_n_s_warp2dFastLab_locals_lambda, NULL, __pyx_n_s_warping__warping, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_14_warp2dFastLab_lambda, 0, __pyx_n_s_warp2dFastLab_locals_lambda, NULL, __pyx_n_s_revunet_data_warping__warping, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_img_sh);
   __Pyx_GIVEREF(__pyx_v_img_sh);
@@ -3455,10 +3454,10 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2);
@@ -3466,57 +3465,57 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
   __pyx_t_2 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PySequence_List(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_5 = PySequence_List(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_off = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":106
+  /* "revunet/data/warping/_warping.pyx":102
  *     new_lab = np.zeros((1,)+img_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab.shape)))
  *     new_lab[0, off[0]:lab.shape[0]+off[0], off[1]:lab.shape[1]+off[1]] = lab             # <<<<<<<<<<<<<<
  *     lab = new_lab
  *     cdef float [:, :, :] lab_view = lab
  */
-  __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PySlice_New(__pyx_t_5, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_4 = PySlice_New(__pyx_t_5, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PySlice_New(__pyx_t_1, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_5 = PySlice_New(__pyx_t_1, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
@@ -3527,10 +3526,10 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_t_5);
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
-  if (unlikely(PyObject_SetItem(__pyx_v_new_lab, __pyx_t_3, __pyx_v_lab) < 0)) __PYX_ERR(0, 106, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(__pyx_v_new_lab, __pyx_t_3, __pyx_v_lab) < 0)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":107
+  /* "revunet/data/warping/_warping.pyx":103
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab.shape)))
  *     new_lab[0, off[0]:lab.shape[0]+off[0], off[1]:lab.shape[1]+off[1]] = lab
  *     lab = new_lab             # <<<<<<<<<<<<<<
@@ -3540,19 +3539,19 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_new_lab);
   __Pyx_DECREF_SET(__pyx_v_lab, __pyx_v_new_lab);
 
-  /* "warping/_warping.pyx":108
+  /* "revunet/data/warping/_warping.pyx":104
  *     new_lab[0, off[0]:lab.shape[0]+off[0], off[1]:lab.shape[1]+off[1]] = lab
  *     lab = new_lab
  *     cdef float [:, :, :] lab_view = lab             # <<<<<<<<<<<<<<
  *     cdef float * in_ptr = &lab_view[0, 0, 0]
  * 
  */
-  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_lab, PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_lab, PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 104, __pyx_L1_error)
   __pyx_v_lab_view = __pyx_t_10;
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
 
-  /* "warping/_warping.pyx":109
+  /* "revunet/data/warping/_warping.pyx":105
  *     lab = new_lab
  *     cdef float [:, :, :] lab_view = lab
  *     cdef float * in_ptr = &lab_view[0, 0, 0]             # <<<<<<<<<<<<<<
@@ -3577,50 +3576,50 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_13 >= __pyx_v_lab_view.shape[2])) __pyx_t_8 = 2;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 109, __pyx_L1_error)
+    __PYX_ERR(0, 105, __pyx_L1_error)
   }
   __pyx_v_in_ptr = (&(*((float *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_lab_view.data + __pyx_t_11 * __pyx_v_lab_view.strides[0]) ) + __pyx_t_12 * __pyx_v_lab_view.strides[1]) ) + __pyx_t_13 * __pyx_v_lab_view.strides[2]) ))));
 
-  /* "warping/_warping.pyx":111
+  /* "revunet/data/warping/_warping.pyx":107
  *     cdef float * in_ptr = &lab_view[0, 0, 0]
  * 
  *     cdef int [:] in_sh_view = np.ascontiguousarray(lab.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_int32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_int32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 111, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_14 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 107, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_in_sh_view = __pyx_t_14;
   __pyx_t_14.memview = NULL;
   __pyx_t_14.data = NULL;
 
-  /* "warping/_warping.pyx":112
+  /* "revunet/data/warping/_warping.pyx":108
  * 
  *     cdef int [:] in_sh_view = np.ascontiguousarray(lab.shape, dtype=np.int32)
  *     cdef int * in_sh_ptr = &in_sh_view[0]             # <<<<<<<<<<<<<<
@@ -3635,20 +3634,20 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_15 >= __pyx_v_in_sh_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 112, __pyx_L1_error)
+    __PYX_ERR(0, 108, __pyx_L1_error)
   }
   __pyx_v_in_sh_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_in_sh_view.data + __pyx_t_15 * __pyx_v_in_sh_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":114
+  /* "revunet/data/warping/_warping.pyx":110
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  *     out_shape = list(map(lambda x: x[0]-2*x[1], zip(patch_size, off)))             # <<<<<<<<<<<<<<
  *     out_shape = (1,) + tuple(out_shape)
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7warping_8_warping_14_warp2dFastLab_1lambda1, 0, __pyx_n_s_warp2dFastLab_locals_lambda, NULL, __pyx_n_s_warping__warping, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_14_warp2dFastLab_1lambda1, 0, __pyx_n_s_warp2dFastLab_locals_lambda, NULL, __pyx_n_s_revunet_data_warping__warping, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_patch_size);
   __Pyx_GIVEREF(__pyx_v_patch_size);
@@ -3656,10 +3655,10 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_off);
   __Pyx_GIVEREF(__pyx_v_off);
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_off);
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
@@ -3667,57 +3666,57 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_4);
   __pyx_t_2 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PySequence_List(__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_3 = PySequence_List(__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_out_shape = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":115
+  /* "revunet/data/warping/_warping.pyx":111
  * 
  *     out_shape = list(map(lambda x: x[0]-2*x[1], zip(patch_size, off)))
  *     out_shape = (1,) + tuple(out_shape)             # <<<<<<<<<<<<<<
  * 
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  */
-  __pyx_t_3 = __Pyx_PySequence_Tuple(__pyx_v_out_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PySequence_Tuple(__pyx_v_out_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyNumber_Add(__pyx_tuple__3, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_tuple__3, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF_SET(__pyx_v_out_shape, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":117
+  /* "revunet/data/warping/_warping.pyx":113
  *     out_shape = (1,) + tuple(out_shape)
  * 
  *     out_arr = np.zeros(out_shape, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     cdef float [:, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_out_shape);
   __Pyx_GIVEREF(__pyx_v_out_shape);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_out_shape);
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -3725,19 +3724,19 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __pyx_v_out_arr = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":118
+  /* "revunet/data/warping/_warping.pyx":114
  * 
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :] out_view = out_arr             # <<<<<<<<<<<<<<
  *     cdef float * out_ptr = &out_view[0, 0, 0]
  * 
  */
-  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_dsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 114, __pyx_L1_error)
   __pyx_v_out_view = __pyx_t_10;
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
 
-  /* "warping/_warping.pyx":119
+  /* "revunet/data/warping/_warping.pyx":115
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0]             # <<<<<<<<<<<<<<
@@ -3762,50 +3761,50 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_18 >= __pyx_v_out_view.shape[2])) __pyx_t_8 = 2;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 119, __pyx_L1_error)
+    __PYX_ERR(0, 115, __pyx_L1_error)
   }
   __pyx_v_out_ptr = (&(*((float *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_out_view.data + __pyx_t_16 * __pyx_v_out_view.strides[0]) ) + __pyx_t_17 * __pyx_v_out_view.strides[1]) ) + __pyx_t_18 * __pyx_v_out_view.strides[2]) ))));
 
-  /* "warping/_warping.pyx":121
+  /* "revunet/data/warping/_warping.pyx":117
  *     cdef float * out_ptr = &out_view[0, 0, 0]
  * 
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * ps_ptr  = &ps_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 121, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_14 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ps_view = __pyx_t_14;
   __pyx_t_14.memview = NULL;
   __pyx_t_14.data = NULL;
 
-  /* "warping/_warping.pyx":122
+  /* "revunet/data/warping/_warping.pyx":118
  * 
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)
  *     cdef int * ps_ptr  = &ps_view[0]             # <<<<<<<<<<<<<<
@@ -3820,33 +3819,33 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_19 >= __pyx_v_ps_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 122, __pyx_L1_error)
+    __PYX_ERR(0, 118, __pyx_L1_error)
   }
   __pyx_v_ps_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_ps_view.data + __pyx_t_19 * __pyx_v_ps_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":124
+  /* "revunet/data/warping/_warping.pyx":120
  *     cdef int * ps_ptr  = &ps_view[0]
  * 
  *     fastwarp2d_opt(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear, scale_ptr, stretch_ptr)             # <<<<<<<<<<<<<<
  *     out_arr = out_arr.astype(np.int16)[0]
  *     return out_arr
  */
-  __pyx_t_20 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_20 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
-  __pyx_t_21 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_21 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_t_20 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_20 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 120, __pyx_L1_error)
+  __pyx_t_21 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_21 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 120, __pyx_L1_error)
   (void)(fastwarp2d_opt(__pyx_v_in_ptr, __pyx_v_out_ptr, __pyx_v_in_sh_ptr, __pyx_v_ps_ptr, __pyx_t_20, __pyx_t_21, __pyx_v_scale_ptr, __pyx_v_stretch_ptr));
 
-  /* "warping/_warping.pyx":125
+  /* "revunet/data/warping/_warping.pyx":121
  * 
  *     fastwarp2d_opt(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear, scale_ptr, stretch_ptr)
  *     out_arr = out_arr.astype(np.int16)[0]             # <<<<<<<<<<<<<<
  *     return out_arr
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_astype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_astype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_int16); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_int16); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -3862,16 +3861,16 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 125, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF_SET(__pyx_v_out_arr, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":126
+  /* "revunet/data/warping/_warping.pyx":122
  *     fastwarp2d_opt(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear, scale_ptr, stretch_ptr)
  *     out_arr = out_arr.astype(np.int16)[0]
  *     return out_arr             # <<<<<<<<<<<<<<
@@ -3883,7 +3882,7 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __pyx_r = __pyx_v_out_arr;
   goto __pyx_L0;
 
-  /* "warping/_warping.pyx":91
+  /* "revunet/data/warping/_warping.pyx":87
  * 
  * 
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):             # <<<<<<<<<<<<<<
@@ -3901,7 +3900,7 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_10, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_14, 1);
-  __Pyx_AddTraceback("warping._warping._warp2dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp2dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_scale_view, 1);
@@ -3924,7 +3923,7 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":129
+/* "revunet/data/warping/_warping.pyx":125
  * 
  * 
  * def warp3dFast(img, patch_size, rot=0, shear=0, scale=(1,1,1), stretch=(0,0,0,0), twist=0):             # <<<<<<<<<<<<<<
@@ -3933,10 +3932,10 @@ static PyObject *__pyx_pf_7warping_8_warping_2_warp2dFastLab(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_7warping_8_warping_4warp3dFast[] = "\n    Create warped mapping for a spatial 3D input image.\n    The transformation is done w.r.t to the *center* of the image.\n\n    Note that some transformations are not applied to the z-axis. This makes this function simpler\n    and it is also better for anisotropic data as the different scales are not mixed up then.\n\n    Parameters\n    ----------\n\n    img: array\n      The array must be 4-dimensional (z,ch,x,y) and larger/equal the patch size\n    patch_size: 3-tuple\n      Patch size *excluding* channel: (pz, px, py).\n      The warping result of the input image is cropped to this size\n    rot: float\n      Rotation angle in deg for rotation around z-axis\n    shear: float\n      Shear angle in deg for shear w.r.t xy-diagonal\n    scale: 3-tuple of float\n      Scale per axis\n    stretch: 4-tuple of float\n      Fraction of perspective stretching from the center (where stretching is always 1)\n      to the outer border of image per axis. The 4 entry correspond to:\n\n      - X stretching depending on Y\n      - Y stretching depending on X\n      - X stretching depending on Z\n      - Y stretching depending on Z\n\n    twist: float\n      Dependence of the rotation angle on z in deg from center to outer border\n\n    Returns\n    -------\n\n    img: np.ndarray\n      Warped array (cropped to patch_size)\n\n    ";
-static PyMethodDef __pyx_mdef_7warping_8_warping_5warp3dFast = {"warp3dFast", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7warping_8_warping_5warp3dFast, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7warping_8_warping_4warp3dFast};
-static PyObject *__pyx_pw_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7revunet_4data_7warping_8_warping_4warp3dFast[] = "\n    Create warped mapping for a spatial 3D input image.\n    The transformation is done w.r.t to the *center* of the image.\n\n    Note that some transformations are not applied to the z-axis. This makes this function simpler\n    and it is also better for anisotropic data as the different scales are not mixed up then.\n\n    Parameters\n    ----------\n\n    img: array\n      The array must be 4-dimensional (z,ch,x,y) and larger/equal the patch size\n    patch_size: 3-tuple\n      Patch size *excluding* channel: (pz, px, py).\n      The warping result of the input image is cropped to this size\n    rot: float\n      Rotation angle in deg for rotation around z-axis\n    shear: float\n      Shear angle in deg for shear w.r.t xy-diagonal\n    scale: 3-tuple of float\n      Scale per axis\n    stretch: 4-tuple of float\n      Fraction of perspective stretching from the center (where stretching is always 1)\n      to the outer border of image per axis. The 4 entry correspond to:\n\n      - X stretching depending on Y\n      - Y stretching depending on X\n      - X stretching depending on Z\n      - Y stretching depending on Z\n\n    twist: float\n      Dependence of the rotation angle on z in deg from center to outer border\n\n    Returns\n    -------\n\n    img: np.ndarray\n      Warped array (cropped to patch_size)\n\n    ";
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_5warp3dFast = {"warp3dFast", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7revunet_4data_7warping_8_warping_5warp3dFast, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7revunet_4data_7warping_8_warping_4warp3dFast};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_img = 0;
   PyObject *__pyx_v_patch_size = 0;
   PyObject *__pyx_v_rot = 0;
@@ -3985,7 +3984,7 @@ static PyObject *__pyx_pw_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, P
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_patch_size)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("warp3dFast", 0, 2, 7, 1); __PYX_ERR(0, 129, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("warp3dFast", 0, 2, 7, 1); __PYX_ERR(0, 125, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -4019,7 +4018,7 @@ static PyObject *__pyx_pw_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, P
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp3dFast") < 0)) __PYX_ERR(0, 129, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "warp3dFast") < 0)) __PYX_ERR(0, 125, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4049,20 +4048,20 @@ static PyObject *__pyx_pw_7warping_8_warping_5warp3dFast(PyObject *__pyx_self, P
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("warp3dFast", 0, 2, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 129, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("warp3dFast", 0, 2, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 125, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("warping._warping.warp3dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping.warp3dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7warping_8_warping_4warp3dFast(__pyx_self, __pyx_v_img, __pyx_v_patch_size, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch, __pyx_v_twist);
+  __pyx_r = __pyx_pf_7revunet_4data_7warping_8_warping_4warp3dFast(__pyx_self, __pyx_v_img, __pyx_v_patch_size, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch, __pyx_v_twist);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist) {
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_img, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist) {
   __Pyx_memviewslice __pyx_v_scale_view = { 0, 0, { 0 }, { 0 }, { 0 } };
   float *__pyx_v_scale_ptr;
   __Pyx_memviewslice __pyx_v_stretch_view = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -4112,7 +4111,7 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __Pyx_INCREF(__pyx_v_stretch);
   __Pyx_INCREF(__pyx_v_twist);
 
-  /* "warping/_warping.pyx":170
+  /* "revunet/data/warping/_warping.pyx":166
  * 
  *     """
  *     assert len(img.shape)==4             # <<<<<<<<<<<<<<
@@ -4121,109 +4120,109 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
  */
   #ifndef CYTHON_WITHOUT_ASSERTIONS
   if (unlikely(!Py_OptimizeFlag)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!((__pyx_t_2 == 4) != 0))) {
       PyErr_SetNone(PyExc_AssertionError);
-      __PYX_ERR(0, 170, __pyx_L1_error)
+      __PYX_ERR(0, 166, __pyx_L1_error)
     }
   }
   #endif
 
-  /* "warping/_warping.pyx":173
+  /* "revunet/data/warping/_warping.pyx":169
  * 
  *     # Rotation, shear, twist.
  *     rot   = rot   * np.pi / 180             # <<<<<<<<<<<<<<
  *     shear = shear * np.pi / 180
  *     twist = twist * np.pi / 180
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_rot, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":174
+  /* "revunet/data/warping/_warping.pyx":170
  *     # Rotation, shear, twist.
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180             # <<<<<<<<<<<<<<
  *     twist = twist * np.pi / 180
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_pi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_pi); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_180); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_180); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF_SET(__pyx_v_shear, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":175
+  /* "revunet/data/warping/_warping.pyx":171
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180
  *     twist = twist * np.pi / 180             # <<<<<<<<<<<<<<
  * 
  *     # Scale.
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pi); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_twist, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_twist, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_180); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_twist, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":178
+  /* "revunet/data/warping/_warping.pyx":174
  * 
  *     # Scale.
  *     scale = np.array(scale, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     scale = 1.0/scale
  *     cdef float [:] scale_view = scale
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_scale);
   __Pyx_GIVEREF(__pyx_v_scale);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_scale);
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 174, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4231,31 +4230,31 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "warping/_warping.pyx":179
+  /* "revunet/data/warping/_warping.pyx":175
  *     # Scale.
  *     scale = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale = 1.0/scale             # <<<<<<<<<<<<<<
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]
  */
-  __pyx_t_6 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "warping/_warping.pyx":180
+  /* "revunet/data/warping/_warping.pyx":176
  *     scale = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale = 1.0/scale
  *     cdef float [:] scale_view = scale             # <<<<<<<<<<<<<<
  *     cdef float * scale_ptr = &scale_view[0]
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 176, __pyx_L1_error)
   __pyx_v_scale_view = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "warping/_warping.pyx":181
+  /* "revunet/data/warping/_warping.pyx":177
  *     scale = 1.0/scale
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]             # <<<<<<<<<<<<<<
@@ -4270,39 +4269,39 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   } else if (unlikely(__pyx_t_8 >= __pyx_v_scale_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 181, __pyx_L1_error)
+    __PYX_ERR(0, 177, __pyx_L1_error)
   }
   __pyx_v_scale_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_scale_view.data + __pyx_t_8 * __pyx_v_scale_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":184
+  /* "revunet/data/warping/_warping.pyx":180
  * 
  *     # Perspective stretch.
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(__pyx_v_stretch);
   __Pyx_GIVEREF(__pyx_v_stretch);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_stretch);
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 184, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -4310,19 +4309,19 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_stretch, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":185
+  /* "revunet/data/warping/_warping.pyx":181
  *     # Perspective stretch.
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch             # <<<<<<<<<<<<<<
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 181, __pyx_L1_error)
   __pyx_v_stretch_view = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "warping/_warping.pyx":186
+  /* "revunet/data/warping/_warping.pyx":182
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]             # <<<<<<<<<<<<<<
@@ -4337,37 +4336,37 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   } else if (unlikely(__pyx_t_10 >= __pyx_v_stretch_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 186, __pyx_L1_error)
+    __PYX_ERR(0, 182, __pyx_L1_error)
   }
   __pyx_v_stretch_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_stretch_view.data + __pyx_t_10 * __pyx_v_stretch_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":189
+  /* "revunet/data/warping/_warping.pyx":185
  * 
  *     # Image.
  *     img = np.ascontiguousarray(img, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     cdef float [:, :, :, :] img_view = img
  *     cdef float * in_ptr = &img_view[0, 0, 0, 0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_img);
   __Pyx_GIVEREF(__pyx_v_img);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_img);
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -4375,19 +4374,19 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_img, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":190
+  /* "revunet/data/warping/_warping.pyx":186
  *     # Image.
  *     img = np.ascontiguousarray(img, dtype=np.float32)
  *     cdef float [:, :, :, :] img_view = img             # <<<<<<<<<<<<<<
  *     cdef float * in_ptr = &img_view[0, 0, 0, 0]
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_img, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 186, __pyx_L1_error)
   __pyx_v_img_view = __pyx_t_11;
   __pyx_t_11.memview = NULL;
   __pyx_t_11.data = NULL;
 
-  /* "warping/_warping.pyx":191
+  /* "revunet/data/warping/_warping.pyx":187
  *     img = np.ascontiguousarray(img, dtype=np.float32)
  *     cdef float [:, :, :, :] img_view = img
  *     cdef float * in_ptr = &img_view[0, 0, 0, 0]             # <<<<<<<<<<<<<<
@@ -4417,50 +4416,50 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   } else if (unlikely(__pyx_t_15 >= __pyx_v_img_view.shape[3])) __pyx_t_9 = 3;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 191, __pyx_L1_error)
+    __PYX_ERR(0, 187, __pyx_L1_error)
   }
   __pyx_v_in_ptr = (&(*((float *) ( /* dim=3 */ (( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_img_view.data + __pyx_t_12 * __pyx_v_img_view.strides[0]) ) + __pyx_t_13 * __pyx_v_img_view.strides[1]) ) + __pyx_t_14 * __pyx_v_img_view.strides[2]) ) + __pyx_t_15 * __pyx_v_img_view.strides[3]) ))));
 
-  /* "warping/_warping.pyx":194
+  /* "revunet/data/warping/_warping.pyx":190
  * 
  *     # Image shape.
  *     cdef int [:] in_sh_view = np.ascontiguousarray(img.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_in_sh_view = __pyx_t_16;
   __pyx_t_16.memview = NULL;
   __pyx_t_16.data = NULL;
 
-  /* "warping/_warping.pyx":195
+  /* "revunet/data/warping/_warping.pyx":191
  *     # Image shape.
  *     cdef int [:] in_sh_view = np.ascontiguousarray(img.shape, dtype=np.int32)
  *     cdef int * in_sh_ptr = &in_sh_view[0]             # <<<<<<<<<<<<<<
@@ -4475,29 +4474,29 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   } else if (unlikely(__pyx_t_17 >= __pyx_v_in_sh_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 195, __pyx_L1_error)
+    __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_v_in_sh_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_in_sh_view.data + __pyx_t_17 * __pyx_v_in_sh_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":198
+  /* "revunet/data/warping/_warping.pyx":194
  * 
  *     # Output.
  *     out_shape = (patch_size[0], img.shape[1], patch_size[1], patch_size[2])             # <<<<<<<<<<<<<<
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :, :] out_view = out_arr
  */
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_patch_size, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_patch_size, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_patch_size, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_patch_size, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_patch_size, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_patch_size, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
@@ -4514,33 +4513,33 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __pyx_v_out_shape = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":199
+  /* "revunet/data/warping/_warping.pyx":195
  *     # Output.
  *     out_shape = (patch_size[0], img.shape[1], patch_size[1], patch_size[2])
  *     out_arr = np.zeros(out_shape, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     cdef float [:, :, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0, 0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_out_shape);
   __Pyx_GIVEREF(__pyx_v_out_shape);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_out_shape);
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float32); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4548,19 +4547,19 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __pyx_v_out_arr = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":200
+  /* "revunet/data/warping/_warping.pyx":196
  *     out_shape = (patch_size[0], img.shape[1], patch_size[1], patch_size[2])
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :, :] out_view = out_arr             # <<<<<<<<<<<<<<
  *     cdef float * out_ptr = &out_view[0, 0, 0, 0]
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 196, __pyx_L1_error)
   __pyx_v_out_view = __pyx_t_11;
   __pyx_t_11.memview = NULL;
   __pyx_t_11.data = NULL;
 
-  /* "warping/_warping.pyx":201
+  /* "revunet/data/warping/_warping.pyx":197
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0, 0]             # <<<<<<<<<<<<<<
@@ -4590,50 +4589,50 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   } else if (unlikely(__pyx_t_21 >= __pyx_v_out_view.shape[3])) __pyx_t_9 = 3;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 201, __pyx_L1_error)
+    __PYX_ERR(0, 197, __pyx_L1_error)
   }
   __pyx_v_out_ptr = (&(*((float *) ( /* dim=3 */ (( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_out_view.data + __pyx_t_18 * __pyx_v_out_view.strides[0]) ) + __pyx_t_19 * __pyx_v_out_view.strides[1]) ) + __pyx_t_20 * __pyx_v_out_view.strides[2]) ) + __pyx_t_21 * __pyx_v_out_view.strides[3]) ))));
 
-  /* "warping/_warping.pyx":204
+  /* "revunet/data/warping/_warping.pyx":200
  * 
  *     # Output shape.
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * ps_ptr = &ps_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_int32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_int32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_5, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_ps_view = __pyx_t_16;
   __pyx_t_16.memview = NULL;
   __pyx_t_16.data = NULL;
 
-  /* "warping/_warping.pyx":205
+  /* "revunet/data/warping/_warping.pyx":201
  *     # Output shape.
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)
  *     cdef int * ps_ptr = &ps_view[0]             # <<<<<<<<<<<<<<
@@ -4648,30 +4647,30 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   } else if (unlikely(__pyx_t_22 >= __pyx_v_ps_view.shape[0])) __pyx_t_9 = 0;
   if (unlikely(__pyx_t_9 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_9);
-    __PYX_ERR(0, 205, __pyx_L1_error)
+    __PYX_ERR(0, 201, __pyx_L1_error)
   }
   __pyx_v_ps_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_ps_view.data + __pyx_t_22 * __pyx_v_ps_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":207
+  /* "revunet/data/warping/_warping.pyx":203
  *     cdef int * ps_ptr = &ps_view[0]
  * 
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,             # <<<<<<<<<<<<<<
  *                         scale_ptr, stretch_ptr, twist)
  *     return out_arr
  */
-  __pyx_t_23 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_23 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-  __pyx_t_24 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_24 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_23 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_23 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_24 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_24 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":208
+  /* "revunet/data/warping/_warping.pyx":204
  * 
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,
  *                         scale_ptr, stretch_ptr, twist)             # <<<<<<<<<<<<<<
  *     return out_arr
  * 
  */
-  __pyx_t_25 = __pyx_PyFloat_AsFloat(__pyx_v_twist); if (unlikely((__pyx_t_25 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_25 = __pyx_PyFloat_AsFloat(__pyx_v_twist); if (unlikely((__pyx_t_25 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":207
+  /* "revunet/data/warping/_warping.pyx":203
  *     cdef int * ps_ptr = &ps_view[0]
  * 
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,             # <<<<<<<<<<<<<<
@@ -4680,7 +4679,7 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
  */
   (void)(fastwarp3d_opt_zxy(__pyx_v_in_ptr, __pyx_v_out_ptr, __pyx_v_in_sh_ptr, __pyx_v_ps_ptr, __pyx_t_23, __pyx_t_24, __pyx_v_scale_ptr, __pyx_v_stretch_ptr, __pyx_t_25));
 
-  /* "warping/_warping.pyx":209
+  /* "revunet/data/warping/_warping.pyx":205
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,
  *                         scale_ptr, stretch_ptr, twist)
  *     return out_arr             # <<<<<<<<<<<<<<
@@ -4692,7 +4691,7 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __pyx_r = __pyx_v_out_arr;
   goto __pyx_L0;
 
-  /* "warping/_warping.pyx":129
+  /* "revunet/data/warping/_warping.pyx":125
  * 
  * 
  * def warp3dFast(img, patch_size, rot=0, shear=0, scale=(1,1,1), stretch=(0,0,0,0), twist=0):             # <<<<<<<<<<<<<<
@@ -4710,7 +4709,7 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-  __Pyx_AddTraceback("warping._warping.warp3dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping.warp3dFast", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_scale_view, 1);
@@ -4732,7 +4731,7 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":212
+/* "revunet/data/warping/_warping.pyx":208
  * 
  * 
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):             # <<<<<<<<<<<<<<
@@ -4741,9 +4740,9 @@ static PyObject *__pyx_pf_7warping_8_warping_4warp3dFast(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7warping_8_warping_7_warp3dFastLab = {"_warp3dFastLab", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7warping_8_warping_7_warp3dFastLab, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_7_warp3dFastLab = {"_warp3dFastLab", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7revunet_4data_7warping_8_warping_7_warp3dFastLab, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_lab = 0;
   PyObject *__pyx_v_patch_size = 0;
   PyObject *__pyx_v_img_sh = 0;
@@ -4790,47 +4789,47 @@ static PyObject *__pyx_pw_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_patch_size)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 1); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 1); __PYX_ERR(0, 208, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_img_sh)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 2); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 2); __PYX_ERR(0, 208, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rot)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 3); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 3); __PYX_ERR(0, 208, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shear)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 4); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 4); __PYX_ERR(0, 208, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_scale)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 5); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 5); __PYX_ERR(0, 208, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_stretch)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 6); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 6); __PYX_ERR(0, 208, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_twist)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 7); __PYX_ERR(0, 212, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, 7); __PYX_ERR(0, 208, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_warp3dFastLab") < 0)) __PYX_ERR(0, 212, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_warp3dFastLab") < 0)) __PYX_ERR(0, 208, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 8) {
       goto __pyx_L5_argtuple_error;
@@ -4855,20 +4854,20 @@ static PyObject *__pyx_pw_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 212, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_warp3dFastLab", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 208, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("warping._warping._warp3dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp3dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7warping_8_warping_6_warp3dFastLab(__pyx_self, __pyx_v_lab, __pyx_v_patch_size, __pyx_v_img_sh, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch, __pyx_v_twist);
+  __pyx_r = __pyx_pf_7revunet_4data_7warping_8_warping_6_warp3dFastLab(__pyx_self, __pyx_v_lab, __pyx_v_patch_size, __pyx_v_img_sh, __pyx_v_rot, __pyx_v_shear, __pyx_v_scale, __pyx_v_stretch, __pyx_v_twist);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":235
+/* "revunet/data/warping/_warping.pyx":231
  *     new_lab_sh = (img_sh[0], n_chann, img_sh[1],img_sh[2])
  *     new_lab = np.zeros(new_lab_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))             # <<<<<<<<<<<<<<
@@ -4877,9 +4876,9 @@ static PyObject *__pyx_pw_7warping_8_warping_7_warp3dFastLab(PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7warping_8_warping_14_warp3dFastLab_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_7warping_8_warping_14_warp3dFastLab_lambda2 = {"lambda2", (PyCFunction)__pyx_pw_7warping_8_warping_14_warp3dFastLab_lambda2, METH_O, 0};
-static PyObject *__pyx_pw_7warping_8_warping_14_warp3dFastLab_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_14_warp3dFastLab_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_7revunet_4data_7warping_8_warping_14_warp3dFastLab_lambda2 = {"lambda2", (PyCFunction)__pyx_pw_7revunet_4data_7warping_8_warping_14_warp3dFastLab_lambda2, METH_O, 0};
+static PyObject *__pyx_pw_7revunet_4data_7warping_8_warping_14_warp3dFastLab_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda2 (wrapper)", 0);
@@ -4898,15 +4897,15 @@ static PyObject *__pyx_lambda_funcdef_lambda2(CYTHON_UNUSED PyObject *__pyx_self
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("lambda2", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_FloorDivideObjC(__pyx_t_3, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_FloorDivideObjC(__pyx_t_3, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
@@ -4918,7 +4917,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(CYTHON_UNUSED PyObject *__pyx_self
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("warping._warping._warp3dFastLab.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp3dFastLab.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4926,7 +4925,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(CYTHON_UNUSED PyObject *__pyx_self
   return __pyx_r;
 }
 
-/* "warping/_warping.pyx":212
+/* "revunet/data/warping/_warping.pyx":208
  * 
  * 
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):             # <<<<<<<<<<<<<<
@@ -4934,7 +4933,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(CYTHON_UNUSED PyObject *__pyx_self
  *     lab_sh  = (lab.shape[0], lab.shape[2], lab.shape[3])
  */
 
-static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist) {
+static PyObject *__pyx_pf_7revunet_4data_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_lab, PyObject *__pyx_v_patch_size, PyObject *__pyx_v_img_sh, PyObject *__pyx_v_rot, PyObject *__pyx_v_shear, PyObject *__pyx_v_scale, PyObject *__pyx_v_stretch, PyObject *__pyx_v_twist) {
   PyObject *__pyx_v_n_chann = NULL;
   PyObject *__pyx_v_lab_sh = NULL;
   __Pyx_memviewslice __pyx_v_scale_view = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -4989,44 +4988,44 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_stretch);
   __Pyx_INCREF(__pyx_v_twist);
 
-  /* "warping/_warping.pyx":213
+  /* "revunet/data/warping/_warping.pyx":209
  * 
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):
  *     n_chann = lab.shape[1]             # <<<<<<<<<<<<<<
  *     lab_sh  = (lab.shape[0], lab.shape[2], lab.shape[3])
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_n_chann = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":214
+  /* "revunet/data/warping/_warping.pyx":210
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):
  *     n_chann = lab.shape[1]
  *     lab_sh  = (lab.shape[0], lab.shape[2], lab.shape[3])             # <<<<<<<<<<<<<<
  * 
  *     # Rotation, shear, twist.
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_2, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_2, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -5040,98 +5039,98 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __pyx_v_lab_sh = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":217
+  /* "revunet/data/warping/_warping.pyx":213
  * 
  *     # Rotation, shear, twist.
  *     rot   = rot   * np.pi / 180             # <<<<<<<<<<<<<<
  *     shear = shear * np.pi / 180
  *     twist = twist * np.pi / 180
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pi); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pi); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_rot, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_int_180); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_int_180); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF_SET(__pyx_v_rot, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":218
+  /* "revunet/data/warping/_warping.pyx":214
  *     # Rotation, shear, twist.
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180             # <<<<<<<<<<<<<<
  *     twist = twist * np.pi / 180
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_v_shear, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_180); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_180); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF_SET(__pyx_v_shear, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":219
+  /* "revunet/data/warping/_warping.pyx":215
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180
  *     twist = twist * np.pi / 180             # <<<<<<<<<<<<<<
  * 
  *     # Scale.
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pi); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pi); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_twist, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_twist, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_int_180); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_2, __pyx_int_180); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF_SET(__pyx_v_twist, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":222
+  /* "revunet/data/warping/_warping.pyx":218
  * 
  *     # Scale.
  *     scale = np.array(scale, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     scale = 1.0/scale
  *     cdef float [:] scale_view = scale
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_scale);
   __Pyx_GIVEREF(__pyx_v_scale);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_scale);
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -5139,31 +5138,31 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":223
+  /* "revunet/data/warping/_warping.pyx":219
  *     # Scale.
  *     scale = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale = 1.0/scale             # <<<<<<<<<<<<<<
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]
  */
-  __pyx_t_5 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_DivideCObj(__pyx_float_1_0, __pyx_v_scale, 1.0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF_SET(__pyx_v_scale, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "warping/_warping.pyx":224
+  /* "revunet/data/warping/_warping.pyx":220
  *     scale = np.array(scale, dtype=np.float32, order='C', ndmin=1)
  *     scale = 1.0/scale
  *     cdef float [:] scale_view = scale             # <<<<<<<<<<<<<<
  *     cdef float * scale_ptr = &scale_view[0]
  * 
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 224, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_scale, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 220, __pyx_L1_error)
   __pyx_v_scale_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "warping/_warping.pyx":225
+  /* "revunet/data/warping/_warping.pyx":221
  *     scale = 1.0/scale
  *     cdef float [:] scale_view = scale
  *     cdef float * scale_ptr = &scale_view[0]             # <<<<<<<<<<<<<<
@@ -5178,39 +5177,39 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_7 >= __pyx_v_scale_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 225, __pyx_L1_error)
+    __PYX_ERR(0, 221, __pyx_L1_error)
   }
   __pyx_v_scale_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_scale_view.data + __pyx_t_7 * __pyx_v_scale_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":228
+  /* "revunet/data/warping/_warping.pyx":224
  * 
  *     # Perspective stretch.
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)             # <<<<<<<<<<<<<<
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_stretch);
   __Pyx_GIVEREF(__pyx_v_stretch);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_stretch);
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 228, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 228, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 228, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_C) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_ndmin, __pyx_int_1) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -5218,19 +5217,19 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_DECREF_SET(__pyx_v_stretch, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":229
+  /* "revunet/data/warping/_warping.pyx":225
  *     # Perspective stretch.
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch             # <<<<<<<<<<<<<<
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_v_stretch, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 225, __pyx_L1_error)
   __pyx_v_stretch_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "warping/_warping.pyx":230
+  /* "revunet/data/warping/_warping.pyx":226
  *     stretch = np.array(stretch, dtype=np.float32, order='C', ndmin=1)
  *     cdef float [:] stretch_view = stretch
  *     cdef float * stretch_ptr = &stretch_view[0]             # <<<<<<<<<<<<<<
@@ -5245,24 +5244,24 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_9 >= __pyx_v_stretch_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 230, __pyx_L1_error)
+    __PYX_ERR(0, 226, __pyx_L1_error)
   }
   __pyx_v_stretch_ptr = (&(*((float *) ( /* dim=0 */ (__pyx_v_stretch_view.data + __pyx_t_9 * __pyx_v_stretch_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":233
+  /* "revunet/data/warping/_warping.pyx":229
  * 
  *     # Label.
  *     new_lab_sh = (img_sh[0], n_chann, img_sh[1],img_sh[2])             # <<<<<<<<<<<<<<
  *     new_lab = np.zeros(new_lab_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_img_sh, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_img_sh, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_img_sh, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_img_sh, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_img_sh, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_img_sh, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -5279,33 +5278,33 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __pyx_v_new_lab_sh = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "warping/_warping.pyx":234
+  /* "revunet/data/warping/_warping.pyx":230
  *     # Label.
  *     new_lab_sh = (img_sh[0], n_chann, img_sh[1],img_sh[2])
  *     new_lab = np.zeros(new_lab_sh, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))
  *     new_lab[off[0]:lab_sh[0]+off[0], :, off[1]:lab_sh[1]+off[1], off[2]:lab_sh[2]+off[2]] = lab
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_new_lab_sh);
   __Pyx_GIVEREF(__pyx_v_new_lab_sh);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_new_lab_sh);
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 234, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5313,16 +5312,16 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __pyx_v_new_lab = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":235
+  /* "revunet/data/warping/_warping.pyx":231
  *     new_lab_sh = (img_sh[0], n_chann, img_sh[1],img_sh[2])
  *     new_lab = np.zeros(new_lab_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))             # <<<<<<<<<<<<<<
  *     new_lab[off[0]:lab_sh[0]+off[0], :, off[1]:lab_sh[1]+off[1], off[2]:lab_sh[2]+off[2]] = lab
  *     lab = new_lab
  */
-  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7warping_8_warping_14_warp3dFastLab_lambda2, 0, __pyx_n_s_warp3dFastLab_locals_lambda, NULL, __pyx_n_s_warping__warping, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_14_warp3dFastLab_lambda2, 0, __pyx_n_s_warp3dFastLab_locals_lambda, NULL, __pyx_n_s_revunet_data_warping__warping, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_img_sh);
   __Pyx_GIVEREF(__pyx_v_img_sh);
@@ -5330,10 +5329,10 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_lab_sh);
   __Pyx_GIVEREF(__pyx_v_lab_sh);
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_lab_sh);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2);
@@ -5341,65 +5340,65 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_map, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PySequence_List(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_4 = PySequence_List(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_off = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":236
+  /* "revunet/data/warping/_warping.pyx":232
  *     new_lab = np.zeros(new_lab_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))
  *     new_lab[off[0]:lab_sh[0]+off[0], :, off[1]:lab_sh[1]+off[1], off[2]:lab_sh[2]+off[2]] = lab             # <<<<<<<<<<<<<<
  *     lab = new_lab
  *     cdef float [:, :, :, :] lab_view = lab
  */
-  __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetItemInt_Tuple(__pyx_v_lab_sh, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt_Tuple(__pyx_v_lab_sh, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_off, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = PyNumber_Add(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Add(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PySlice_New(__pyx_t_4, __pyx_t_5, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_2 = PySlice_New(__pyx_t_4, __pyx_t_5, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_lab_sh, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_lab_sh, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_off, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PySlice_New(__pyx_t_5, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_3 = PySlice_New(__pyx_t_5, __pyx_t_1, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_off, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_off, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetItemInt_Tuple(__pyx_v_lab_sh, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt_Tuple(__pyx_v_lab_sh, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_off, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_off, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_10 = PyNumber_Add(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_10 = PyNumber_Add(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PySlice_New(__pyx_t_1, __pyx_t_10, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_4 = PySlice_New(__pyx_t_1, __pyx_t_10, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = PyTuple_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_10 = PyTuple_New(4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_2);
@@ -5413,10 +5412,10 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
-  if (unlikely(PyObject_SetItem(__pyx_v_new_lab, __pyx_t_10, __pyx_v_lab) < 0)) __PYX_ERR(0, 236, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(__pyx_v_new_lab, __pyx_t_10, __pyx_v_lab) < 0)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "warping/_warping.pyx":237
+  /* "revunet/data/warping/_warping.pyx":233
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))
  *     new_lab[off[0]:lab_sh[0]+off[0], :, off[1]:lab_sh[1]+off[1], off[2]:lab_sh[2]+off[2]] = lab
  *     lab = new_lab             # <<<<<<<<<<<<<<
@@ -5426,19 +5425,19 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_new_lab);
   __Pyx_DECREF_SET(__pyx_v_lab, __pyx_v_new_lab);
 
-  /* "warping/_warping.pyx":238
+  /* "revunet/data/warping/_warping.pyx":234
  *     new_lab[off[0]:lab_sh[0]+off[0], :, off[1]:lab_sh[1]+off[1], off[2]:lab_sh[2]+off[2]] = lab
  *     lab = new_lab
  *     cdef float [:, :, :, :] lab_view = lab             # <<<<<<<<<<<<<<
  *     cdef float * in_ptr = &lab_view[0, 0, 0, 0]
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_lab, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_lab, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 234, __pyx_L1_error)
   __pyx_v_lab_view = __pyx_t_11;
   __pyx_t_11.memview = NULL;
   __pyx_t_11.data = NULL;
 
-  /* "warping/_warping.pyx":239
+  /* "revunet/data/warping/_warping.pyx":235
  *     lab = new_lab
  *     cdef float [:, :, :, :] lab_view = lab
  *     cdef float * in_ptr = &lab_view[0, 0, 0, 0]             # <<<<<<<<<<<<<<
@@ -5468,50 +5467,50 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_15 >= __pyx_v_lab_view.shape[3])) __pyx_t_8 = 3;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 239, __pyx_L1_error)
+    __PYX_ERR(0, 235, __pyx_L1_error)
   }
   __pyx_v_in_ptr = (&(*((float *) ( /* dim=3 */ (( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_lab_view.data + __pyx_t_12 * __pyx_v_lab_view.strides[0]) ) + __pyx_t_13 * __pyx_v_lab_view.strides[1]) ) + __pyx_t_14 * __pyx_v_lab_view.strides[2]) ) + __pyx_t_15 * __pyx_v_lab_view.strides[3]) ))));
 
-  /* "warping/_warping.pyx":242
+  /* "revunet/data/warping/_warping.pyx":238
  * 
  *     # Label shape.
  *     cdef int [:] in_sh_view = np.ascontiguousarray(lab.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_lab, __pyx_n_s_shape); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_10);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_10);
   __pyx_t_10 = 0;
-  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_int32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_int32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 242, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_in_sh_view = __pyx_t_16;
   __pyx_t_16.memview = NULL;
   __pyx_t_16.data = NULL;
 
-  /* "warping/_warping.pyx":243
+  /* "revunet/data/warping/_warping.pyx":239
  *     # Label shape.
  *     cdef int [:] in_sh_view = np.ascontiguousarray(lab.shape, dtype=np.int32)
  *     cdef int * in_sh_ptr = &in_sh_view[0]             # <<<<<<<<<<<<<<
@@ -5526,11 +5525,11 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_17 >= __pyx_v_in_sh_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 243, __pyx_L1_error)
+    __PYX_ERR(0, 239, __pyx_L1_error)
   }
   __pyx_v_in_sh_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_in_sh_view.data + __pyx_t_17 * __pyx_v_in_sh_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":245
+  /* "revunet/data/warping/_warping.pyx":241
  *     cdef int * in_sh_ptr = &in_sh_view[0]
  * 
  *     out_shape = patch_size             # <<<<<<<<<<<<<<
@@ -5540,20 +5539,20 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_patch_size);
   __pyx_v_out_shape = __pyx_v_patch_size;
 
-  /* "warping/_warping.pyx":246
+  /* "revunet/data/warping/_warping.pyx":242
  * 
  *     out_shape = patch_size
  *     out_shape = (out_shape[0], n_chann, out_shape[1], out_shape[2])             # <<<<<<<<<<<<<<
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :, :] out_view = out_arr
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_out_shape, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_out_shape, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_out_shape, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_out_shape, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_out_shape, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_out_shape, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 246, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
@@ -5570,33 +5569,33 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_DECREF_SET(__pyx_v_out_shape, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "warping/_warping.pyx":247
+  /* "revunet/data/warping/_warping.pyx":243
  *     out_shape = patch_size
  *     out_shape = (out_shape[0], n_chann, out_shape[1], out_shape[2])
  *     out_arr = np.zeros(out_shape, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     cdef float [:, :, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0, 0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_out_shape);
   __Pyx_GIVEREF(__pyx_v_out_shape);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_out_shape);
-  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_float32); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 247, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -5604,19 +5603,19 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __pyx_v_out_arr = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "warping/_warping.pyx":248
+  /* "revunet/data/warping/_warping.pyx":244
  *     out_shape = (out_shape[0], n_chann, out_shape[1], out_shape[2])
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :, :] out_view = out_arr             # <<<<<<<<<<<<<<
  *     cdef float * out_ptr = &out_view[0, 0, 0, 0]
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_dsdsdsds_float(__pyx_v_out_arr, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 244, __pyx_L1_error)
   __pyx_v_out_view = __pyx_t_11;
   __pyx_t_11.memview = NULL;
   __pyx_t_11.data = NULL;
 
-  /* "warping/_warping.pyx":249
+  /* "revunet/data/warping/_warping.pyx":245
  *     out_arr = np.zeros(out_shape, dtype=np.float32)
  *     cdef float [:, :, :, :] out_view = out_arr
  *     cdef float * out_ptr = &out_view[0, 0, 0, 0]             # <<<<<<<<<<<<<<
@@ -5646,50 +5645,50 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_21 >= __pyx_v_out_view.shape[3])) __pyx_t_8 = 3;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 249, __pyx_L1_error)
+    __PYX_ERR(0, 245, __pyx_L1_error)
   }
   __pyx_v_out_ptr = (&(*((float *) ( /* dim=3 */ (( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_out_view.data + __pyx_t_18 * __pyx_v_out_view.strides[0]) ) + __pyx_t_19 * __pyx_v_out_view.strides[1]) ) + __pyx_t_20 * __pyx_v_out_view.strides[2]) ) + __pyx_t_21 * __pyx_v_out_view.strides[3]) ))));
 
-  /* "warping/_warping.pyx":252
+  /* "revunet/data/warping/_warping.pyx":248
  * 
  *     # Output shape.
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef int * ps_ptr = &ps_view[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_out_arr, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int32); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 252, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_int(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ps_view = __pyx_t_16;
   __pyx_t_16.memview = NULL;
   __pyx_t_16.data = NULL;
 
-  /* "warping/_warping.pyx":253
+  /* "revunet/data/warping/_warping.pyx":249
  *     # Output shape.
  *     cdef int [:] ps_view = np.ascontiguousarray(out_arr.shape, dtype=np.int32)
  *     cdef int * ps_ptr = &ps_view[0]             # <<<<<<<<<<<<<<
@@ -5704,30 +5703,30 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   } else if (unlikely(__pyx_t_22 >= __pyx_v_ps_view.shape[0])) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 253, __pyx_L1_error)
+    __PYX_ERR(0, 249, __pyx_L1_error)
   }
   __pyx_v_ps_ptr = (&(*((int *) ( /* dim=0 */ (__pyx_v_ps_view.data + __pyx_t_22 * __pyx_v_ps_view.strides[0]) ))));
 
-  /* "warping/_warping.pyx":255
+  /* "revunet/data/warping/_warping.pyx":251
  *     cdef int * ps_ptr = &ps_view[0]
  * 
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,             # <<<<<<<<<<<<<<
  *                         scale_ptr, stretch_ptr, twist)
  *     # out_arr = out_arr.astype(np.int16)[:,0]
  */
-  __pyx_t_23 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_23 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 255, __pyx_L1_error)
-  __pyx_t_24 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_24 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_23 = __pyx_PyFloat_AsFloat(__pyx_v_rot); if (unlikely((__pyx_t_23 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_24 = __pyx_PyFloat_AsFloat(__pyx_v_shear); if (unlikely((__pyx_t_24 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 251, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":256
+  /* "revunet/data/warping/_warping.pyx":252
  * 
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,
  *                         scale_ptr, stretch_ptr, twist)             # <<<<<<<<<<<<<<
  *     # out_arr = out_arr.astype(np.int16)[:,0]
  *     return out_arr
  */
-  __pyx_t_25 = __pyx_PyFloat_AsFloat(__pyx_v_twist); if (unlikely((__pyx_t_25 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 256, __pyx_L1_error)
+  __pyx_t_25 = __pyx_PyFloat_AsFloat(__pyx_v_twist); if (unlikely((__pyx_t_25 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 252, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":255
+  /* "revunet/data/warping/_warping.pyx":251
  *     cdef int * ps_ptr = &ps_view[0]
  * 
  *     fastwarp3d_opt_zxy(in_ptr, out_ptr, in_sh_ptr, ps_ptr, rot, shear,             # <<<<<<<<<<<<<<
@@ -5736,7 +5735,7 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
  */
   (void)(fastwarp3d_opt_zxy(__pyx_v_in_ptr, __pyx_v_out_ptr, __pyx_v_in_sh_ptr, __pyx_v_ps_ptr, __pyx_t_23, __pyx_t_24, __pyx_v_scale_ptr, __pyx_v_stretch_ptr, __pyx_t_25));
 
-  /* "warping/_warping.pyx":258
+  /* "revunet/data/warping/_warping.pyx":254
  *                         scale_ptr, stretch_ptr, twist)
  *     # out_arr = out_arr.astype(np.int16)[:,0]
  *     return out_arr             # <<<<<<<<<<<<<<
@@ -5746,7 +5745,7 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __pyx_r = __pyx_v_out_arr;
   goto __pyx_L0;
 
-  /* "warping/_warping.pyx":212
+  /* "revunet/data/warping/_warping.pyx":208
  * 
  * 
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):             # <<<<<<<<<<<<<<
@@ -5765,7 +5764,7 @@ static PyObject *__pyx_pf_7warping_8_warping_6_warp3dFastLab(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_10);
   __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-  __Pyx_AddTraceback("warping._warping._warp3dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("revunet.data.warping._warping._warp3dFastLab", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_n_chann);
@@ -18688,7 +18687,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "warping._warping.array", /*tp_name*/
+  "revunet.data.warping._warping.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -18796,7 +18795,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "warping._warping.Enum", /*tp_name*/
+  "revunet.data.warping._warping.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -19046,7 +19045,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "warping._warping.memoryview", /*tp_name*/
+  "revunet.data.warping._warping.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -19173,7 +19172,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "warping._warping._memoryviewslice", /*tp_name*/
+  "revunet.data.warping._warping._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -19255,7 +19254,7 @@ static PyModuleDef_Slot __pyx_moduledef_slots[] = {
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
     "_warping",
-    __pyx_k_Adapted_from_ELEKTRONN_http_ele, /* m_doc */
+    0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
   #else
@@ -19386,6 +19385,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
+  {&__pyx_n_s_revunet_data_warping__warping, __pyx_k_revunet_data_warping__warping, sizeof(__pyx_k_revunet_data_warping__warping), 0, 0, 1, 1},
   {&__pyx_n_s_rot, __pyx_k_rot, sizeof(__pyx_k_rot), 0, 0, 1, 1},
   {&__pyx_n_s_scale, __pyx_k_scale, sizeof(__pyx_k_scale), 0, 0, 1, 1},
   {&__pyx_n_s_scale_ptr, __pyx_k_scale_ptr, sizeof(__pyx_k_scale_ptr), 0, 0, 1, 1},
@@ -19418,15 +19418,14 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_warp3dFast, __pyx_k_warp3dFast, sizeof(__pyx_k_warp3dFast), 0, 0, 1, 1},
   {&__pyx_n_s_warp3dFastLab, __pyx_k_warp3dFastLab, sizeof(__pyx_k_warp3dFastLab), 0, 0, 1, 1},
   {&__pyx_n_s_warp3dFastLab_locals_lambda, __pyx_k_warp3dFastLab_locals_lambda, sizeof(__pyx_k_warp3dFastLab_locals_lambda), 0, 0, 1, 1},
-  {&__pyx_n_s_warping__warping, __pyx_k_warping__warping, sizeof(__pyx_k_warping__warping), 0, 0, 1, 1},
   {&__pyx_kp_s_warping_pyx, __pyx_k_warping_pyx, sizeof(__pyx_k_warping_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {&__pyx_n_s_zip, __pyx_k_zip, sizeof(__pyx_k_zip), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_map = __Pyx_GetBuiltinName(__pyx_n_s_map); if (!__pyx_builtin_map) __PYX_ERR(0, 105, __pyx_L1_error)
-  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_builtin_map = __Pyx_GetBuiltinName(__pyx_n_s_map); if (!__pyx_builtin_map) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 101, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 151, __pyx_L1_error)
@@ -19444,53 +19443,53 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "warping/_warping.pyx":27
+  /* "revunet/data/warping/_warping.pyx":23
  * 
  * 
  * def warp2dFast(img, patch_size, rot=0, shear=0, scale=(1,1), stretch=(0,0)):             # <<<<<<<<<<<<<<
  *     """
  *     Create warped mapping for a spatial 2D input image.
  */
-  __pyx_tuple_ = PyTuple_Pack(2, __pyx_int_1, __pyx_int_1); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(2, __pyx_int_1, __pyx_int_1); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "warping/_warping.pyx":104
+  /* "revunet/data/warping/_warping.pyx":100
  *     cdef float * stretch_ptr = &stretch_view[0]
  * 
  *     new_lab = np.zeros((1,)+img_sh, dtype=np.float32)             # <<<<<<<<<<<<<<
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab.shape)))
  *     new_lab[0, off[0]:lab.shape[0]+off[0], off[1]:lab.shape[1]+off[1]] = lab
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "warping/_warping.pyx":129
+  /* "revunet/data/warping/_warping.pyx":125
  * 
  * 
  * def warp3dFast(img, patch_size, rot=0, shear=0, scale=(1,1,1), stretch=(0,0,0,0), twist=0):             # <<<<<<<<<<<<<<
  *     """
  *     Create warped mapping for a spatial 3D input image.
  */
-  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_int_1, __pyx_int_1, __pyx_int_1); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_int_1, __pyx_int_1, __pyx_int_1); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_tuple__5 = PyTuple_Pack(4, __pyx_int_0, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(4, __pyx_int_0, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "warping/_warping.pyx":236
+  /* "revunet/data/warping/_warping.pyx":232
  *     new_lab = np.zeros(new_lab_sh, dtype=np.float32)
  *     off = list(map(lambda x: (x[0]-x[1])//2, zip(img_sh, lab_sh)))
  *     new_lab[off[0]:lab_sh[0]+off[0], :, off[1]:lab_sh[1]+off[1], off[2]:lab_sh[2]+off[2]] = lab             # <<<<<<<<<<<<<<
  *     lab = new_lab
  *     cdef float [:, :, :, :] lab_view = lab
  */
-  __pyx_slice__6 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__6)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_slice__6 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__6)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
 
@@ -19675,53 +19674,53 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
 
-  /* "warping/_warping.pyx":27
+  /* "revunet/data/warping/_warping.pyx":23
  * 
  * 
  * def warp2dFast(img, patch_size, rot=0, shear=0, scale=(1,1), stretch=(0,0)):             # <<<<<<<<<<<<<<
  *     """
  *     Create warped mapping for a spatial 2D input image.
  */
-  __pyx_tuple__24 = PyTuple_Pack(19, __pyx_n_s_img, __pyx_n_s_patch_size, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_img_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_tuple__24 = PyTuple_Pack(19, __pyx_n_s_img, __pyx_n_s_patch_size, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_img_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(6, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp2dFast, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(6, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp2dFast, 23, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 23, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":91
+  /* "revunet/data/warping/_warping.pyx":87
  * 
  * 
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):             # <<<<<<<<<<<<<<
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180
  */
-  __pyx_tuple__26 = PyTuple_Pack(23, __pyx_n_s_lab, __pyx_n_s_patch_size, __pyx_n_s_img_sh, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_new_lab, __pyx_n_s_off, __pyx_n_s_lab_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_shape, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(23, __pyx_n_s_lab, __pyx_n_s_patch_size, __pyx_n_s_img_sh, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_new_lab, __pyx_n_s_off, __pyx_n_s_lab_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_shape, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(7, 0, 23, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp2dFastLab, 91, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(7, 0, 23, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp2dFastLab, 87, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 87, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":129
+  /* "revunet/data/warping/_warping.pyx":125
  * 
  * 
  * def warp3dFast(img, patch_size, rot=0, shear=0, scale=(1,1,1), stretch=(0,0,0,0), twist=0):             # <<<<<<<<<<<<<<
  *     """
  *     Create warped mapping for a spatial 3D input image.
  */
-  __pyx_tuple__28 = PyTuple_Pack(21, __pyx_n_s_img, __pyx_n_s_patch_size, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_twist, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_img_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_shape, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(21, __pyx_n_s_img, __pyx_n_s_patch_size, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_twist, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_img_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_shape, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(7, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp3dFast, 129, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(7, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp3dFast, 125, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 125, __pyx_L1_error)
 
-  /* "warping/_warping.pyx":212
+  /* "revunet/data/warping/_warping.pyx":208
  * 
  * 
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):             # <<<<<<<<<<<<<<
  *     n_chann = lab.shape[1]
  *     lab_sh  = (lab.shape[0], lab.shape[2], lab.shape[3])
  */
-  __pyx_tuple__30 = PyTuple_Pack(27, __pyx_n_s_lab, __pyx_n_s_patch_size, __pyx_n_s_img_sh, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_twist, __pyx_n_s_n_chann, __pyx_n_s_lab_sh, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_new_lab_sh, __pyx_n_s_new_lab, __pyx_n_s_off, __pyx_n_s_lab_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_shape, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(27, __pyx_n_s_lab, __pyx_n_s_patch_size, __pyx_n_s_img_sh, __pyx_n_s_rot, __pyx_n_s_shear, __pyx_n_s_scale, __pyx_n_s_stretch, __pyx_n_s_twist, __pyx_n_s_n_chann, __pyx_n_s_lab_sh, __pyx_n_s_scale_view, __pyx_n_s_scale_ptr, __pyx_n_s_stretch_view, __pyx_n_s_stretch_ptr, __pyx_n_s_new_lab_sh, __pyx_n_s_new_lab, __pyx_n_s_off, __pyx_n_s_lab_view, __pyx_n_s_in_ptr, __pyx_n_s_in_sh_view, __pyx_n_s_in_sh_ptr, __pyx_n_s_out_shape, __pyx_n_s_out_arr, __pyx_n_s_out_view, __pyx_n_s_out_ptr, __pyx_n_s_ps_view, __pyx_n_s_ps_ptr); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 208, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(8, 0, 27, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp3dFastLab, 212, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(8, 0, 27, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_warping_pyx, __pyx_n_s_warp3dFastLab, 208, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 208, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -20075,7 +20074,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_warping", __pyx_methods, __pyx_k_Adapted_from_ELEKTRONN_http_ele, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("_warping", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -20094,14 +20093,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_warping___warping) {
+  if (__pyx_module_is_main_revunet__data__warping___warping) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "warping._warping")) {
-      if (unlikely(PyDict_SetItemString(modules, "warping._warping", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "revunet.data.warping._warping")) {
+      if (unlikely(PyDict_SetItemString(modules, "revunet.data.warping._warping", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -20122,70 +20121,68 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "warping/_warping.pyx":5
- * """
- * 
+  /* "revunet/data/warping/_warping.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * 
  * cdef extern from 'warping.c':
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":27
+  /* "revunet/data/warping/_warping.pyx":23
  * 
  * 
  * def warp2dFast(img, patch_size, rot=0, shear=0, scale=(1,1), stretch=(0,0)):             # <<<<<<<<<<<<<<
  *     """
  *     Create warped mapping for a spatial 2D input image.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7warping_8_warping_1warp2dFast, NULL, __pyx_n_s_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_1warp2dFast, NULL, __pyx_n_s_revunet_data_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp2dFast, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp2dFast, __pyx_t_1) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":91
+  /* "revunet/data/warping/_warping.pyx":87
  * 
  * 
  * def _warp2dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch):             # <<<<<<<<<<<<<<
  *     rot   = rot   * np.pi / 180
  *     shear = shear * np.pi / 180
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7warping_8_warping_3_warp2dFastLab, NULL, __pyx_n_s_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_3_warp2dFastLab, NULL, __pyx_n_s_revunet_data_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp2dFastLab, __pyx_t_1) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp2dFastLab, __pyx_t_1) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":129
+  /* "revunet/data/warping/_warping.pyx":125
  * 
  * 
  * def warp3dFast(img, patch_size, rot=0, shear=0, scale=(1,1,1), stretch=(0,0,0,0), twist=0):             # <<<<<<<<<<<<<<
  *     """
  *     Create warped mapping for a spatial 3D input image.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7warping_8_warping_5warp3dFast, NULL, __pyx_n_s_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_5warp3dFast, NULL, __pyx_n_s_revunet_data_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp3dFast, __pyx_t_1) < 0) __PYX_ERR(0, 129, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp3dFast, __pyx_t_1) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":212
+  /* "revunet/data/warping/_warping.pyx":208
  * 
  * 
  * def _warp3dFastLab(lab, patch_size, img_sh, rot, shear, scale, stretch, twist):             # <<<<<<<<<<<<<<
  *     n_chann = lab.shape[1]
  *     lab_sh  = (lab.shape[0], lab.shape[2], lab.shape[3])
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7warping_8_warping_7_warp3dFastLab, NULL, __pyx_n_s_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7revunet_4data_7warping_8_warping_7_warp3dFastLab, NULL, __pyx_n_s_revunet_data_warping__warping); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp3dFastLab, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warp3dFastLab, __pyx_t_1) < 0) __PYX_ERR(0, 208, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "warping/_warping.pyx":1
- * """             # <<<<<<<<<<<<<<
- *     Adapted from ELEKTRONN (http://elektronn.org/).
- * """
+  /* "revunet/data/warping/_warping.pyx":1
+ * import numpy as np             # <<<<<<<<<<<<<<
+ * 
+ * cdef extern from 'warping.c':
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -20352,11 +20349,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init warping._warping", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init revunet.data.warping._warping", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init warping._warping");
+    PyErr_SetString(PyExc_ImportError, "init revunet.data.warping._warping");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

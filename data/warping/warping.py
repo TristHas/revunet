@@ -1,20 +1,6 @@
-# -*- coding: utf-8 -*-
-# ELEKTRONN - Neural Network Toolkit
-#
-# Copyright (c) 2014 - now
-# Max-Planck-Institute for Medical Research, Heidelberg, Germany
-# Authors: Marius Killinger, Gregor Urban
-
 import time
 import matplotlib.pyplot as plt
-
 import numpy as np
-
-# try:
-#     from ._warping import warp2dFast, warp3dFast, _warp2dFastLab, _warp3dFastLab
-# except ImportError:
-#     raise RuntimeError('_warping.so Cython extension not found.\n'
-#                        'Please run setup.py or manually cythonize _warping.pyx.')
 from ._warping import warp2dFast, warp3dFast, _warp2dFastLab, _warp3dFastLab
 
 
