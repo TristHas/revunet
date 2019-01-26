@@ -50,10 +50,10 @@ class UpsampleMod(nn.Module):
         bias = True
         # Upsampling.
         if mode == 'bilinear':
-            self.up = nn.Upsample(scale_factor=up, mode='trilinear')
+            self.up = lambda x:F.interpolate(x, scale_factor=up, mode='trilinear', align_corners=False) 
             self.conv = Conv(in_channels, out_channels, ks, st, pad, bias)
         elif mode == 'nearest':
-            self.up = nn.Upsample(scale_factor=up, mode='nearest')
+            self.up = lambda x:F.interpolate(x, scale_factor=up, mode='nearest') 
             self.conv = Conv(in_channels, out_channels, ks, st, pad, bias)
         elif mode == 'transpose':
             self.up = ConvT(in_channels, out_channels,
