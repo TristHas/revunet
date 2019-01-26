@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from .rev_block import RevBlock
-from .utils import pad_size
+from .utils import pad_size, flatten
 
 class IConv3d(nn.Module):
     def __init__(self, in_channels, out_channels, *args, invert=True, **kwargs):
@@ -201,18 +201,14 @@ class ResidualConvMod(nn.Module):
                  invert=True, nlayer=3, pad=(1,1,1),
                  ks=(3,3,3), bias=False, bn_stats=False, st=(1,1,1)):
         super().__init__()
-        self.layers = nn.ModuleList([
+        layers = [(
+            IBatchNorm3d(channels, track_running_stats=bn_stats, invert=invert),
+            activation,
             IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias, invert=invert),
-            *[
-                module for module in 
-                (
-                    IBatchNorm3d(channels, track_running_stats=bn_stats, invert=invert),
-                    activation,
-                    IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias, invert=invert)
-                )
-                for layer in range(nlayer-2)
-            ],
-        ])
+        )
+                   for layer in range(nlayer-2)]
+        layers = [IConv3d(channels, channels, kernel_size=ks, stride=st, padding=pad, bias=bias, invert=invert)] + flatten(layers)
+        self.layers = nn.ModuleList(layers)
         
         self.invert = invert
         self.delete_intermediaries = False
