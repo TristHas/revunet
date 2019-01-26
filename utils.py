@@ -4,6 +4,8 @@ import torch
 import torch.nn.functional as F
 from tensorboardX import SummaryWriter
 
+flatten = lambda x: [y for z in x for y in z]
+
 def pad_size(ks, mode):
     assert mode in ['valid', 'same', 'full']
     if mode == 'valid':

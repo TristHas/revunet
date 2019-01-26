@@ -53,9 +53,9 @@ class RevBlock(nn.Module):
 
         y = torch.cat([self.cp2.get(), y2], dim=1)
         
-        self.cp1.drop()
-        self.cp2.drop()
         if self.invert:
+            self.cp1.drop()
+            self.cp2.drop()
             y1.data.set_()
             y2.data.set_()
             
