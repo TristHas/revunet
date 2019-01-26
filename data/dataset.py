@@ -2,6 +2,7 @@ from torch.utils.data import DataLoader
 import torch
 import numpy as np
 from .preprocess import Warp, Flip, Greyscale, Affinity
+from tqdm import tqdm
 
 default_dst = list()
 default_dst.append((0,0,1))
@@ -17,12 +18,17 @@ default_dst.append((0,0,27))
 default_dst.append((0,27,0))
 default_dst.append((4,0,0))
 
+def make_gaussian(z, y, x, sigma=0.5):
+    y, z, x = np.meshgrid(np.linspace(-1,1,y), np.linspace(-1,1,z), np.linspace(-1,1,x))
+    d = np.sqrt(z*z+y*y+x*x)
+    return np.exp(-(d**2 / (2.0 * sigma**2)))
+
 class DataSet(object):
     def __init__(self, fov, img, lbl, 
                  mode="train", w=True, g=True, f=True, 
                  dst=default_dst, nsamp=None):
         self.img = img
-        self.lbl = lbl
+        self.lbl = np.ones_like(img) if lbl is None else lbl
         
         self.fov   = fov
         self.dst   = dst
@@ -111,3 +117,51 @@ class DataSetLoader():
             out = self.ds.sample()
             self.ds.mode = mode_
             return map(lambda x:torch.from_numpy(x[None,:]), out)
+
+class Inference():
+    def __init__(self, fov, img, out_idx=[0,1,2], stride_ratio=(2,2,2), sigma=.5):
+        self.ds = DataSet(fov=fov, img=img, lbl=None, mode="test")
+        fov = np.array(fov)
+        self.delta = fov // 2
+        self.stride = np.array(fov//stride_ratio, dtype=int)
+        self.out_idx = out_idx
+        self.kernel = make_gaussian(*fov, sigma=sigma)
+        self.outputs = np.zeros((len(out_idx),)+self.ds.size)
+        self.masks = np.zeros((len(out_idx),)+self.ds.size)
+        self.locs = self._init_locs()
+    
+    def segment(self, model):
+        for loc in tqdm(self.locs):
+            inp = self._get(loc)
+            out = self._tonp(model(inp))
+            out = out[self.out_idx]
+            self._put(loc, out)
+        return self._get_output()
+    
+    def _init_locs(self):
+        mins = self.delta
+        maxs = self.ds.size - self.delta
+        stride = self.stride
+        return list(product(*[list(range(i,j,k))+[j] for i,j,k in zip(mins, maxs, stride)]))
+    
+    def _get(self, loc):
+        img,_ = self.ds._slice(loc, self.delta)
+        return self._topy(img)
+    
+    def _put(self, loc, out):
+        self.outputs[self._bbox(loc)]+=out*self.kernel
+        self.masks[self._bbox(loc)]+=self.kernel
+    
+    def _get_output(self):
+        return self.outputs/self.masks
+    
+    def _topy(self, x):
+        return torch.from_numpy(x[None,None,:]).cuda()
+    
+    def _tonp(self, x):
+        return x.squeeze().cpu().detach().numpy()
+    
+    def _bbox(self, coord):
+        mins = coord - self.delta
+        maxs = coord + self.delta
+        return (slice(None,None,None),) + tuple(map(lambda x: slice(*x), zip(mins, maxs)))
