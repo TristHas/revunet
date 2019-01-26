@@ -201,7 +201,7 @@ class IUpsample(nn.Upsample):
     
 
 class ResidualConvMod(nn.Module):
-    def __init__(self, channels, activation=None, bn_ieps=0.1
+    def __init__(self, channels, activation=None, bn_ieps=0.1,
                  invert=True, nlayer=3, pad=(1,1,1),
                  ks=(3,3,3), bias=False, bn_stats=False, st=(1,1,1)):
         super().__init__()
