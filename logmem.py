@@ -5,6 +5,7 @@ import torch
 import pandas as pd
 import numpy as np
 import inspect
+import matplotlib.pyplot as plt
 
 def get_gpu_mem(synchronize=True, empty_cache=True):
     return torch.cuda.memory_allocated(), torch.cuda.memory_cached()
@@ -79,3 +80,30 @@ def pp(df, exp):
               
 def print_code(x):
     	print(''.join(inspect.getsourcelines(x)[0]))
+                                                
+def plot_mem(
+    df,
+    exps=None,
+    normalize_call_idx=True,
+    normalize_mem_all=True,
+    filter_fwd=False,
+):
+    if exps is None:
+        exps=df.exp.drop_duplicates()
+    
+    fig, ax = plt.subplots(figsize=(20, 10))
+    for exp in exps:
+        df_ = df[df.exp==exp]
+        
+        if normalize_call_idx:
+            df_.call_idx = df_.call_idx/df_.call_idx.max()
+        
+        
+        if normalize_mem_all:
+            df_.mem_all = df_.mem_all - df_[df_.call_idx == df_.call_idx.min()].mem_all.iloc[0]
+            df_.mem_all = df_.mem_all // 2**20
+            
+        if filter_fwd:
+            df_ = df_[df_.call_idx < df_[df_.hook_type=='bwd'].call_idx.min()]
+        
+        df_.plot(ax=ax, x='call_idx', y='mem_all', label=exp)
