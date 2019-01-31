@@ -87,6 +87,7 @@ def plot_mem(
     normalize_call_idx=True,
     normalize_mem_all=True,
     filter_fwd=False,
+    return_df=False,
 ):
     if exps is None:
         exps=df.exp.drop_duplicates()
@@ -104,6 +105,12 @@ def plot_mem(
             df_.mem_all = df_.mem_all // 2**20
             
         if filter_fwd:
-            df_ = df_[df_.call_idx < df_[df_.hook_type=='bwd'].call_idx.min()]
+            layer_idx = 0
+            callidx_stop = df_[(df_["layer_idx"]==layer_idx) & (df_["hook_type"]=="fwd")]["call_idx"].iloc[0]
+            df_ = df_[df_["call_idx"]<=callidx_stop]
+            #df_ = df_[df_.call_idx < df_[df_.layer_idx=='bwd'].call_idx.min()]
         
         df_.plot(ax=ax, x='call_idx', y='mem_all', label=exp)
+    
+    if return_df:
+        return df_
