@@ -352,3 +352,123 @@ class IBroadcast(nn.Module):
             self.inverse(output, x)
             handle_ref[0].remove()
         return backward_hook
+
+class ShapePool2D(nn.Module):
+    def __init__(self, block_size):
+        super().__init__()
+        self.block_size = block_size
+        self.block_size_sq = block_size*block_size
+
+    def inverse(self, input):
+        output = input.permute(0, 2, 3, 1)
+        (batch_size, d_height, d_width, d_depth) = output.size()
+        s_depth = int(d_depth / self.block_size_sq)
+        s_width = int(d_width * self.block_size)
+        s_height = int(d_height * self.block_size)
+        t_1 = output.contiguous().view(batch_size, d_height, d_width, self.block_size_sq, s_depth)
+        spl = t_1.split(self.block_size, 3)
+        stack = [t_t.contiguous().view(batch_size, d_height, s_width, s_depth) for t_t in spl]
+        output = torch.stack(stack, 0).transpose(0, 1).permute(0, 2, 1, 3, 4).contiguous().view(batch_size, s_height, s_width, s_depth)
+        output = output.permute(0, 3, 1, 2)
+        return output.contiguous()
+
+    def forward(self, input):
+        ref = input
+        output = input.permute(0, 2, 3, 1)
+        (batch_size, s_height, s_width, s_depth) = output.size()
+        d_depth = s_depth * self.block_size_sq
+        d_height = int(s_height / self.block_size)
+        t_1 = output.split(self.block_size, 2)
+        stack = [t_t.contiguous().view(batch_size, d_height, d_depth) for t_t in t_1]
+        output = torch.stack(stack, 1)
+        output = output.permute(0, 2, 1, 3)
+        output = output.permute(0, 3, 1, 2)
+        output = output.contiguous()
+
+        if self.training and output.requires_grad:
+            handle_ref = [0]
+            handle_ref_ = output.register_hook(self.get_variable_backward_hook(ref, output, handle_ref))
+            handle_ref[0] = handle_ref_
+        ref.data.set_()
+        return output
+    
+    def get_variable_backward_hook(self, x, out, handle_ref):
+        def backward_hook(grad):
+            x.data.set_(self.inverse(out))
+            handle_ref[0].remove()
+        return backward_hook
+
+class IConv2d(nn.Module):
+    def __init__(self, in_channels, out_channels, *args, invert=True, **kwargs):
+        super().__init__()
+        self.set_invert(invert)
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.args = args
+        self.kwargs = kwargs
+
+        if self.invert:
+            if self.in_channels == self.out_channels:
+                assert (self.in_channels % 2) == 0
+                f_conv =  nn.Conv2d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
+                g_conv =  nn.Conv2d(self.in_channels//2, self.out_channels//2, *self.args, **self.kwargs)
+                self.module = RevBlock(f_conv, g_conv, invert=True)
+            else:
+                raise Exception(f'Cannot inverse convolution with in_channels {self.in_channels} and out_channels {self.out_channels}')
+        else:
+            self.module = nn.Conv2d(self.in_channels, self.out_channels, *self.args, **self.kwargs)
+
+    def set_invert(self, invert):
+    	self.invert = invert
+
+    def forward(self, x):
+        return self.module(x)
+            
+class IBatchNorm2d(nn.BatchNorm2d):
+    """
+    """
+    def __init__(self, *args, ieps=0, invert=True, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.ieps = ieps
+        self.set_invert(invert)
+        
+    def set_invert(self, invert):
+        self.invert = invert
+        
+    def forward(self, x):
+        if self.invert:
+            return self.i_forward(x)
+        else:
+            return super().forward(x)
+
+    def i_forward(self, x):
+        with torch.no_grad():
+            x_ = x.permute(1,0,2,3).contiguous().view(x.size(1), -1)
+            mean, std = x_.mean(1).squeeze(), x_.std(1).squeeze()
+
+        out = F.batch_norm( 
+            x, None, None, self.weight.abs() + self.ieps, self.bias, 
+            True, 0.0, self.eps
+        )
+
+        if self.training and out.requires_grad:
+            handle_ref = [0]
+            handle_ref_ = out.register_hook(self.get_variable_backward_hook(x, out, std, mean, handle_ref))
+            handle_ref[0] = handle_ref_
+        x.data.set_()
+        return out
+        
+    def inverse(self, y, x, std, mean):
+        with torch.no_grad():
+            x_ =  F.batch_norm(
+                        y, None, None, std, mean, 
+                        True, 0.0, 0
+                    )
+        x.data.set_(x_)
+        y.data.set_()
+
+    def get_variable_backward_hook(self, x, output, std, mean, handle_ref):
+        def backward_hook(grad):
+            self.inverse(output, x, std, mean)
+            handle_ref[0].remove()
+        return backward_hook
