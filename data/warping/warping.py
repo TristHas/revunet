@@ -1,5 +1,4 @@
 import time
-import matplotlib.pyplot as plt
 import numpy as np
 from ._warping import warp2dFast, warp3dFast, _warp2dFastLab, _warp3dFastLab
 
