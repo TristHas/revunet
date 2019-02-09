@@ -57,7 +57,6 @@ class ISkip(nn.Module):
     def set_invert(self, invert):
         self.invert = invert
 
-            
 class IBatchNorm3d(nn.BatchNorm3d):
     """
     """
@@ -77,9 +76,8 @@ class IBatchNorm3d(nn.BatchNorm3d):
 
     def i_forward(self, x):
         with torch.no_grad():
-            x_ = x.view(x.size(0), x.size(1), -1)
-            mean, std = x_.mean(2).squeeze(), x_.std(2).squeeze()
-            
+            x_ = x.permute(1, 0, 2, 3, 4).contiguous().view(x.size(1), -1)
+            mean, std = x_.mean(1).squeeze(), x_.std(1).squeeze()
         out = F.batch_norm( 
             x, None, None, self.weight.abs() + self.ieps, self.bias, 
             True, 0.0, self.eps
@@ -105,8 +103,7 @@ class IBatchNorm3d(nn.BatchNorm3d):
         def backward_hook(grad):
             self.inverse(output, x, std, mean)
             handle_ref[0].remove()
-        return backward_hook
-    
+        return backward_hook    
 
 class ILeakyReLU(nn.LeakyReLU):
     def __init__(self, *args, invert=True, **kwargs):
@@ -472,3 +469,4 @@ class IBatchNorm2d(nn.BatchNorm2d):
             self.inverse(output, x, std, mean)
             handle_ref[0].remove()
         return backward_hook
+    
